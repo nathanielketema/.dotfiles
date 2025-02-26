@@ -10,6 +10,11 @@ export ZSH="$HOME/.oh-my-zsh"
 export C_INCLUDE_PATH="/usr/local/include"
 export VISUAL="/opt/homebrew/bin/nvim"
 
+
+export PATH="/opt/homebrew/opt/tcl-tk/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/tcl-tk/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/tcl-tk/include"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/tcl-tk/lib/pkgconfig"
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -24,6 +29,8 @@ ZSH_THEME="robbyrussell"
 
 bindkey -v
 export KEYTIMEOUT=1
+
+#source <(fzf --zsh)
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -108,22 +115,34 @@ source $ZSH/oh-my-zsh.sh
 
 # Aliases
 
+alias ll="ls -lth"
 alias vim='nvim'
 alias mu="mupdf-gl"
-alias pf="fzf --preview='less {}' --bind shift-up:preview-page-up,shift-down:preview-page-down"
+alias pf="fzf --preview='bat --color=always {}' --bind shift-up:preview-page-up,shift-down:preview-page-down"
 alias so="source"
-alias tom="ssh b2320@cs.dsunix.net"
 alias grep="grep --color=auto"
+alias lgit="lazygit"
+alias gitlog="git log --graph --oneline --decorate --all"
 
-alias sp24="cd /Users/nathaniel/Library/Mobile\ Documents/com\~apple\~CloudDocs/School/Spring\ 2024"
-alias oldnotes="cd ~/Documents/Notes/"
+# Class folders
+alias sp24="cd /Users/nathaniel/Library/Mobile\ Documents/com~apple~CloudDocs/School/1-Spring\ 2024"
+alias fall24="cd /Users/nathaniel/Library/Mobile\ Documents/com~apple~CloudDocs/School/2-Fall\ 2024"
+alias sp25="cd /Users/nathaniel/Library/Mobile\ Documents/com~apple~CloudDocs/School/2-Spring\ 2025"
+#
+# Tom's classes
+alias tom250="ssh b2320@cs.dsunix.net" # Computer Science 250
+alias tom300="ssh g2431@code.dsunix.net" # Data structures
+alias tom314="ssh e2436@code.dsunix.net" # Assembly Language
+alias tom310="ssh c2417@code.dsunix.net" # Advanced Data Structures
+
+alias oldnotes="cd ~/Documents/Notes/; vim"
 
 ## source files
 alias .nvim="cd ~/.config/nvim/; vim"
 alias .zshrc="vim ~/.zshrc"
 
 ## second_brain
-alias brain="cd /Users/nathaniel/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/second_brain"
+alias brain="cd /Users/nathaniel/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/second_brain; vim"
 
 
 function note() {
@@ -138,12 +157,26 @@ function latex() {
 }
 
 function c() {
-    cd "/Users/nathaniel/Library/Mobile Documents/iCloud~md~obsidian/Documents/second_brain/Coding Workspaces/workspace_c/";
+    mkdir "/Users/nathaniel/Library/Mobile Documents/iCloud~md~obsidian/Documents/second_brain/Coding Workspaces/workspace_cpp/$1";
+    cd "/Users/nathaniel/Library/Mobile Documents/iCloud~md~obsidian/Documents/second_brain/Coding Workspaces/workspace_cpp/$1";
     nvim "$1.c"
 }
 
+function cpp() {
+    mkdir "/Users/nathaniel/Library/Mobile Documents/iCloud~md~obsidian/Documents/second_brain/Coding Workspaces/workspace_cpp/$1";
+    cd "/Users/nathaniel/Library/Mobile Documents/iCloud~md~obsidian/Documents/second_brain/Coding Workspaces/workspace_cpp/$1";
+    nvim "$1.cpp"
+}
+
+function csharp() {
+    mkdir "/Users/nathaniel/Library/Mobile Documents/iCloud~md~obsidian/Documents/second_brain/Coding Workspaces/workspace_c-sharp/$1";
+    cd "/Users/nathaniel/Library/Mobile Documents/iCloud~md~obsidian/Documents/second_brain/Coding Workspaces/workspace_c-sharp/$1";
+    nvim "$1.cs"
+}
+
 function python() {
-    cd "/Users/nathaniel/Library/Mobile Documents/iCloud~md~obsidian/Documents/second_brain/Coding Workspaces/workspace_python/";
+    mkdir "/Users/nathaniel/Library/Mobile Documents/iCloud~md~obsidian/Documents/second_brain/Coding Workspaces/workspace_cpp/$1";
+    cd "/Users/nathaniel/Library/Mobile Documents/iCloud~md~obsidian/Documents/second_brain/Coding Workspaces/workspace_cpp/$1";
     nvim "$1.py"
 }
 
@@ -163,3 +196,12 @@ export PATH="/opt/homebrew/opt/sphinx-doc/bin:$PATH"
 
 # Q post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
+
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
