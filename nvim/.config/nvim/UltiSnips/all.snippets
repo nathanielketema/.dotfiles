@@ -1,0 +1,93 @@
+snippet today "Todays date, eg: Monday 23"
+${1:Date}
+---
+$0
+endsnippet
+
+
+snippet mla
+\documentclass[12pt]{article}
+
+\usepackage{ifpdf}
+\usepackage{mla}
+\usepackage{graphicx,array,xurl,fancyvrb,hyperref}
+
+\begin{document}
+
+\begin{mla}{${1:Firstname}}{${2:Lastname}}{${3:TeachersName}}{${4:Course}}{\today}{${5:Title}}
+$0
+
+\begin{workscited}
+Lastname, Firstname, ``Paper Title." \textit{Book Title}. Publication Date.
+\end{workscited}
+\end{mla}
+
+\end{document}
+endsnippet
+
+snippet latex
+\documentclass[11pt, a4paper]{article}
+
+\usepackage{titlesec} % Helps modify sections
+\usepackage{titling} % \theauthor
+\usepackage[margin=1in]{geometry} % Margin and more
+\usepackage{setspace} % Paragraph spacing
+\usepackage{graphicx} % To add image
+\usepackage{color} % helps use colors
+\usepackage{hyperref} % To add links 
+\usepackage{amsmath} % For mathy thing
+\usepackage{caption}
+
+%\title{}
+\author{Nathaniel Ketema}
+
+% Part of the titlesec package
+\titleformat{\section} % [runin] removes the newline after the section title
+{\bfseries\LARGE} % Formatting
+{\thesection.} % Numbering your section --> \thesection adds section number
+{0.5em} % The distance between the number and the section
+{} % Any change after the gap, before the title, [\titlerule]
+
+\titleformat{\subsection}
+{\Large}
+{\thesubsection.}
+{0.5em}
+{}
+
+\titleformat{\subsubsection}
+{}
+{\alph{subsubsection}.}
+{0.5em}
+{}
+
+% margin
+\titlespacing{\subsubsection}
+{0.5em} % left margin
+{0.5em} % space between
+{0em} % space after
+
+\renewcommand{\maketitle} {
+	\begin{center}
+		\Huge\bfseries
+		\theauthor
+	\end{center}
+
+	\vspace{-30pt} % Adjust the value as needed
+
+	\begin{center}
+		\url{nathaniel.ketema@trojans.dsu.edu}
+	\end{center}
+
+	\vspace{-25pt} % Adjust the value as needed
+	\hrulefill
+}
+
+\doublespacing
+
+\begin{document}
+\maketitle
+
+$0
+
+\end{document}
+endsnippet
