@@ -4,12 +4,16 @@ if [[ $# -eq 1 ]]; then
     selected=$1
 else
     selected=$(find \
+        "$HOME/" \
+        "$HOME/personal/" \
+        "$HOME/school/" \
+        "$HOME/work/" \
+        "$HOME/.dotfiles/" \
         "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/second_brain/" \
         "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/second_brain/Notes" \
-        "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/second_brain/Coding Workspaces" \
         "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/second_brain/Files" \
-        "$HOME/Library/Mobile Documents/com~apple~CloudDocs/School/" \
-        -mindepth 1 -maxdepth 2 -type d | fzf)
+        "$HOME/Library/Mobile Documents/com~apple~CloudDocs/School/2-Spring 2025/" \
+        -mindepth 1 -maxdepth 1 -type d | fzf)
 fi
 
 if [[ -z "$selected" ]]; then
