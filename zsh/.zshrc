@@ -155,11 +155,10 @@ function note() {
 }
 
 function latex() {
-    mkdir "/Users/nathaniel/Library/Mobile Documents/iCloud~md~obsidian/Documents/second_brain/Latex Projects/$1";
-    cd "/Users/nathaniel/Library/Mobile Documents/iCloud~md~obsidian/Documents/second_brain/Latex Projects/$1";
+    mkdir "./$1";
+    cd "./$1";
     nvim "$1.tex"
 }
-
 
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 
