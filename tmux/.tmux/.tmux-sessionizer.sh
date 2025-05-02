@@ -9,6 +9,7 @@ else
         "$HOME/school/" \
         "$HOME/work/" \
         "$HOME/.dotfiles/" \
+        "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/" \
         "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/second_brain/" \
         "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/second_brain/Notes" \
         "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/second_brain/Files" \
