@@ -40,7 +40,7 @@ function sessionizer-jump-widget() {
   zle reset-prompt  # refresh prompt after script runs
 }
 zle -N sessionizer-jump-widget
-bindkey '^O' sessionizer-jump-widget
+bindkey '^J' sessionizer-jump-widget
 
 #source <(fzf --zsh)
 
