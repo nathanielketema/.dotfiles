@@ -19,7 +19,10 @@ return {
             local builtin = require("telescope.builtin")
             vim.keymap.set("n", "<leader><leader>", ":Telescope<CR>", {})
             vim.keymap.set("n", "<leader>ff", function()
-                require("telescope.builtin").find_files({ hidden = true })
+                require("telescope.builtin").find_files({
+                    hidden = true,
+                    follow = true
+                })
             end, {})
             vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
             vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
