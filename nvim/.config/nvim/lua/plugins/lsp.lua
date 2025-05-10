@@ -59,12 +59,16 @@ return {
 				capabilities = capabilities,
 			})
 
-			vim.keymap.set("n", "<leader>ho", vim.lsp.buf.hover, {})
-			vim.keymap.set("n", "<leader>gD", vim.lsp.buf.declaration, {})
-			vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
-			vim.keymap.set("n", "<leader>gi", vim.lsp.buf.implementation, {})
-			vim.keymap.set("n", "gr", vim.lsp.buf.references, {})
-			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
+            vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, {})
+            vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, {})
+            vim.keymap.set("n", "<leader>ws", function() vim.lsp.buf.workspace_symbol() end, {})
+            vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, {})
+            vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, {})
+            vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, {})
+            vim.keymap.set("n", "<leader>ca", function() vim.lsp.buf.code_action() end, {})
+            vim.keymap.set("n", "<leader>rr", function() vim.lsp.buf.references() end, {})
+            vim.keymap.set("n", "<leader>rn", function() vim.lsp.buf.rename() end, {})
+            vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, {})
 		end,
 	},
 }
