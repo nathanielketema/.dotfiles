@@ -25,13 +25,13 @@ return {
 			lspconfig.ts_ls.setup({
 				capabilities = capabilities,
 			})
+			lspconfig.ruff.setup({
+				capabilities = capabilities,
+			})
 			lspconfig.html.setup({
 				capabilities = capabilities,
 			})
 			lspconfig.lua_ls.setup({
-				capabilities = capabilities,
-			})
-			lspconfig.ruff.setup({
 				capabilities = capabilities,
 			})
 			lspconfig.clangd.setup({
@@ -49,9 +49,6 @@ return {
 			lspconfig.texlab.setup({
 				capabilities = capabilities,
 			})
-            lspconfig.basedpyright.setup({
-				capabilities = capabilities,
-            })
 			lspconfig.marksman.setup({
 				capabilities = capabilities,
 				root_dir = function()
@@ -61,6 +58,17 @@ return {
 			lspconfig.yamlls.setup({
 				capabilities = capabilities,
 			})
+
+
+            vim.diagnostic.config({
+                virtual_text = {
+                    spacing = 2,
+                },
+                signs = false,
+                underline = true,
+                update_in_insert = false,
+                severity_sort = true,
+            })
 
             vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, {})
             vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, {})
