@@ -31,7 +31,7 @@ return {
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
 			})
-			lspconfig.pyright.setup({
+			lspconfig.ruff.setup({
 				capabilities = capabilities,
 			})
 			lspconfig.clangd.setup({
@@ -49,6 +49,9 @@ return {
 			lspconfig.texlab.setup({
 				capabilities = capabilities,
 			})
+            lspconfig.basedpyright.setup({
+				capabilities = capabilities,
+            })
 			lspconfig.marksman.setup({
 				capabilities = capabilities,
 				root_dir = function()
