@@ -21,7 +21,8 @@ return {
             vim.keymap.set("n", "<leader>ff", function()
                 require("telescope.builtin").find_files({
                     hidden = true,
-                    follow = true
+                    follow = true,
+                    file_ignore_patterns = { ".git/" },
                 })
             end, {})
             vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
