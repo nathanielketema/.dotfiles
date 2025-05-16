@@ -93,6 +93,25 @@ return {
             vim.keymap.set("n", "<leader>ca", function() vim.lsp.buf.code_action() end, {})
             vim.keymap.set("n", "<leader>rr", function() vim.lsp.buf.references() end, {})
             vim.keymap.set("n", "<leader>rn", function() vim.lsp.buf.rename() end, {})
+            vim.keymap.set("n", "<leader>vc", function()
+                vim.diagnostic.config({
+                    virtual_text = false,
+                    signs = false,
+                    underline = false,
+                })
+            end, {})
+            vim.keymap.set("n", "<leader>vs", function()
+                vim.diagnostic.config({
+                    virtual_text = {
+                        spacing = 2,
+                    },
+                    signs = false,
+                    underline = true,
+                    update_in_insert = false,
+                    severity_sort = true,
+                })
+            end, {})
+
             vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, {})
         end,
     },
