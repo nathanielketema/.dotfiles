@@ -25,6 +25,7 @@ return {
                 null_ls.builtins.diagnostics.markdownlint,
                 null_ls.builtins.formatting.black,
                 null_ls.builtins.formatting.csharpier,
+                null_ls.builtins.code_actions.textlint,
                 tex_fmt, -- Add tex-fmt manually
             },
         })
