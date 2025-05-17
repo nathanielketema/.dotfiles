@@ -27,8 +27,6 @@ addToPathFront() {
     fi
 }
 
-#addToPath $HOME/.zig
-
 # tmux sessionizer
 sessionizer-widget() {
   zle -I  # clear any pending input
@@ -45,6 +43,10 @@ sessionizer-jump-widget() {
 }
 zle -N sessionizer-jump-widget
 bindkey '^O' sessionizer-jump-widget
+
+
+# Path
+addToPathFront $HOME/.zig
 
 
 # Q post block. Keep at the bottom of this file.
