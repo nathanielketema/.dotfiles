@@ -46,6 +46,9 @@ return {
                     },
                 },
             })
+            lspconfig.zls.setup({
+                capabilities = capabilities,
+            })
             lspconfig.html.setup({
                 capabilities = capabilities,
             })
