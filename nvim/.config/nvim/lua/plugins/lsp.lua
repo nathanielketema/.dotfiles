@@ -12,6 +12,7 @@ return {
         lazy = false,
         opts = {
             auto_install = true,
+            handlers = {},
         },
     },
     {
@@ -45,6 +46,9 @@ return {
                         },
                     },
                 },
+            })
+            lspconfig.ltex_plus.setup({
+                capabilities = capabilities,
             })
             lspconfig.zls.setup({
                 capabilities = capabilities,
