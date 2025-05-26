@@ -137,6 +137,7 @@ alias oldnotes="cd ~/Documents/Notes/; vim"
 alias .nvim="cd $HOME/.config/nvim/; vim"
 alias .zshrc="vim ~/.zshrc"
 alias brain="cd /Users/nathaniel/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/second_brain; vim"
+alias pdfslide="pympress"
 
 # Class folders
 alias sp24="cd /Users/nathaniel/Library/Mobile\ Documents/com~apple~CloudDocs/School/1-Spring\ 2024"
