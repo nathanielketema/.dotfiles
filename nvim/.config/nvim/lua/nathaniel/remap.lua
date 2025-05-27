@@ -1,5 +1,5 @@
 vim.g.mapleader = " " -- <leader>
-vim.keymap.set("n", "-", "<cmd>Ex<CR>") -- open netrw
+vim.keymap.set("n", "<leader>-", "<cmd>Ex<CR>") -- open netrw
 vim.keymap.set("n", "_", "<cmd>Sex!<CR>") -- open netrw on a side window
 vim.keymap.set("n", "x", '"_x')
 

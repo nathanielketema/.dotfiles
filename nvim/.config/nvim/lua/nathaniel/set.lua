@@ -40,5 +40,4 @@ vim.opt.isfname:append("@-@")
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
-vim.g.netrw_browsex_viewer="mupdf-gl" -- Everytime you press x in netrw it opens with mupdf-gl
 vim.g.netrw_localrmdir='rm -r'
