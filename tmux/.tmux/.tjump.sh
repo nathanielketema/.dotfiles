@@ -11,13 +11,13 @@ while true; do
     --height=40% \
     --reverse \
     --no-unicode \
-    --bind "ctrl-d:execute(tmux kill-session -t {} > /dev/null 2>&1)+accept" \
+    --bind "ctrl-d:execute-silent(tmux kill-session -t {})+reload(tmux list-sessions -F '#{session_name}')" \
     --header="[Enter] switch  [Ctrl+D] kill session")
 
-  # if nothing selected, exit loop
+  # Exit if nothing selected
   [[ -z "$selected" ]] && break
 
-  # check if session still exists
+  # Switch to session if it still exists
   if tmux has-session -t "$selected" 2>/dev/null; then
     tmux switch-client -t "$selected"
     break
