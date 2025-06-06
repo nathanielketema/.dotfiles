@@ -29,30 +29,6 @@ return {
             lspconfig.ruff.setup({
                 capabilities = capabilities,
             })
-            lspconfig.basedpyright.setup({
-                capabilities = capabilities,
-                settings = {
-                    basedpyright = {
-                        disableOrganizeImports = true,
-                        analysis = {
-                            typeCheckingMode = "off",
-                            diagnosticSeverityOverrides = {
-                                reportUnusedImport = "none",
-                                reportUnusedVariable = "none",
-                                reportUndefinedVariable = "none",
-                                reportGeneralTypeIssues = "none",
-                                reportOptionalSubscript = "none",
-                            },
-                        },
-                    },
-                },
-            })
-            lspconfig.ltex_plus.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.zls.setup({
-                capabilities = capabilities,
-            })
             lspconfig.html.setup({
                 capabilities = capabilities,
             })
@@ -69,9 +45,6 @@ return {
                 capabilities = capabilities,
             })
             lspconfig.jsonls.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.texlab.setup({
                 capabilities = capabilities,
             })
             lspconfig.marksman.setup({
