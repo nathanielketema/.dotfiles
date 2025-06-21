@@ -132,7 +132,7 @@ alias vim='nvim'
 alias pf="fzf --preview='bat --color=always {}' --bind shift-up:preview-page-up,shift-down:preview-page-down"
 alias grep="grep --color=auto"
 alias lgit="lazygit"
-alias gitlog="git log --graph --oneline --decorate --all"
+alias gitlog="git --no-pager log --graph --oneline --decorate --all"
 alias oldnotes="cd ~/Documents/Notes/; vim"
 alias .nvim="cd $HOME/.config/nvim/; vim"
 alias .zshrc="vim ~/.zshrc"
