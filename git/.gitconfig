@@ -1,0 +1,13 @@
+[core]
+	compression = 0
+	autocrlf = input
+	editor = nvim
+[http]
+	postBuffer = 1048576000
+[user]
+	name = Nathaniel Ketema
+	email = nathanielketema@gmail.com
+[init]
+	defaultBranch = main
+[pull]
+	rebase = true
