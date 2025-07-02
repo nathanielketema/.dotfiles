@@ -9,11 +9,9 @@ else
         "$HOME/school/" \
         "$HOME/work/" \
         "$HOME/.dotfiles/" \
-        "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/" \
-        "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/second_brain/" \
-        "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/second_brain/Notes" \
-        "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/second_brain/Files" \
-        "$HOME/Library/Mobile Documents/com~apple~CloudDocs/School/2-Spring 2025/" \
+        "$HOME/second_brain/" \
+        "$HOME/second_brain/Notes/" \
+        "$HOME/second_brain/Files/" \
         -mindepth 1 -maxdepth 1 -type d 2>/dev/null | fzf)
 fi
 
