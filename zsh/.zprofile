@@ -27,24 +27,6 @@ addToPathFront() {
     fi
 }
 
-# tmux sessionizer
-sessionizer-widget() {
-  zle -I  # clear any pending input
-  '/Users/nathaniel/.tmux/.tmux-sessionizer.sh'
-  zle reset-prompt  # refresh prompt after script runs
-}
-zle -N sessionizer-widget
-bindkey '^F' sessionizer-widget
-
-sessionizer-jump-widget() {
-  zle -I  # clear any pending input
-  '/Users/nathaniel/.tmux/.tjump.sh'
-  zle reset-prompt  # refresh prompt after script runs
-}
-zle -N sessionizer-jump-widget
-bindkey '^O' sessionizer-jump-widget
-
-
 # Path
 addToPathFront $HOME/.zig
 
