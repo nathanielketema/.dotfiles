@@ -6,11 +6,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-# Todo
-export EDITOR="/opt/homebrew/bin/nvim"
-export C_INCLUDE_PATH="/usr/local/include"
-export VISUAL="/opt/homebrew/bin/nvim"
-
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -25,22 +20,6 @@ ZSH_THEME="robbyrussell"
 
 bindkey -v
 export KEYTIMEOUT=1
-
-function sessionizer-widget() {
-  zle -I  # clear any pending input
-  '/Users/nathaniel/.tmux/.tmux-sessionizer.sh'
-  zle reset-prompt  # refresh prompt after script runs
-}
-zle -N sessionizer-widget
-bindkey '^F' sessionizer-widget
-
-function sessionizer-jump-widget() {
-  zle -I  # clear any pending input
-  '/Users/nathaniel/.tmux/.tjump.sh'
-  zle reset-prompt  # refresh prompt after script runs
-}
-zle -N sessionizer-jump-widget
-bindkey '^J' sessionizer-jump-widget
 
 #source <(fzf --zsh)
 
@@ -126,40 +105,6 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 
 # Aliases
-alias ll="ls -lth"
-alias ez="eza --long --tree --level=3"
-alias vim='nvim'
-alias pf="fzf --preview='bat --color=always {}' --bind shift-up:preview-page-up,shift-down:preview-page-down"
-alias grep="grep --color=auto"
-alias lgit="lazygit"
-alias gitlog="git --no-pager log --graph --oneline --decorate --all"
-alias oldnotes="cd ~/Documents/Notes/; vim"
-alias .nvim="cd $HOME/.config/nvim/; vim"
-alias .zshrc="vim ~/.zshrc"
-alias brain="cd ~/second_brain/"
-alias pdfslide="pympress"
-
-# Class folders
-alias sp24="cd /Users/nathaniel/Library/Mobile\ Documents/com~apple~CloudDocs/School/1-Spring\ 2024"
-alias fall24="cd /Users/nathaniel/Library/Mobile\ Documents/com~apple~CloudDocs/School/2-Fall\ 2024"
-alias sp25="cd /Users/nathaniel/Library/Mobile\ Documents/com~apple~CloudDocs/School/2-Spring\ 2025"
-
-# Tom's ssh aliases for his classes
-alias tom250="ssh b2320@cs.dsunix.net" # Computer Science 250
-alias tom300="ssh g2431@code.dsunix.net" # Data structures
-alias tom314="ssh e2436@code.dsunix.net" # Assembly Language
-alias tom310="ssh c2417@code.dsunix.net" # Advanced Data Structures
-
-function note() {
-    cd "~/second_brain/Notes/Inbox/";
-    nvim "$1.md"
-}
-
-function latex() {
-    mkdir "./$1";
-    cd "./$1";
-    nvim "$1.tex"
-}
 
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 
