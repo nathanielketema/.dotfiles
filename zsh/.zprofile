@@ -55,7 +55,7 @@ alias tom314="ssh e2436@code.dsunix.net" # Assembly Language
 alias tom310="ssh c2417@code.dsunix.net" # Advanced Data Structures
 
 function note() {
-    cd "~/second_brain/Notes/Inbox/";
+    cd "~/second_brain/notes/inbox/";
     nvim "$1.md"
 }
 
@@ -65,21 +65,21 @@ function latex() {
     nvim "$1.tex"
 }
 
-function sessionizer-widget() {
+function sessionizer_widget() {
   zle -I  # clear any pending input
-  '/Users/nathaniel/.tmux/.tmux-sessionizer.sh'
+  '/Users/nathaniel/.tmux/.tmux_sessionizer.sh'
   zle reset-prompt  # refresh prompt after script runs
 }
-zle -N sessionizer-widget
-bindkey '^F' sessionizer-widget
+zle -N sessionizer_widget
+bindkey '^F' sessionizer_widget
 
-function sessionizer-jump-widget() {
+function sessionizer_jump_widget() {
   zle -I  # clear any pending input
   '/Users/nathaniel/.tmux/.tjump.sh'
   zle reset-prompt  # refresh prompt after script runs
 }
-zle -N sessionizer-jump-widget
-bindkey '^J' sessionizer-jump-widget
+zle -N sessionizer_jump_widget
+bindkey '^J' sessionizer_jump_widget
 
 # Q post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zprofile.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zprofile.post.zsh"
