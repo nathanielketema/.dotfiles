@@ -213,6 +213,10 @@ if.app-id = 'com.apple.AppStore'
 run = ['layout floating', 'move-node-to-workspace 6']
 
 [[on-window-detected]]
+if.app-id = 'com.apple.MobileSMS'
+run = ['layout floating', 'move-node-to-workspace 6']
+
+[[on-window-detected]]
 if.app-id = 'com.microsoft.Word'
 run = "move-node-to-workspace 7"
 
@@ -251,10 +255,6 @@ run = ['layout floating', 'move-node-to-workspace N']
 [[on-window-detected]]
 if.app-id = 'ru.keepcoder.Telegram'
 run = "move-node-to-workspace T"
-
-[[on-window-detected]]
-if.app-id = 'com.apple.MobileSMS'
-run = ['layout floating', 'move-node-to-workspace T']
 
 [[on-window-detected]]
 if.app-id = 'com.apple.finder'
