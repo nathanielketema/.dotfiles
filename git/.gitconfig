@@ -11,3 +11,9 @@
 	defaultBranch = main
 [pull]
 	rebase = true
+[diff]
+	tool = nvimdiff
+[difftool]
+	prompt = false
+[merge]
+	tool = nvimdiff
