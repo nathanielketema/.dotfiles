@@ -28,7 +28,6 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 -- It lets you edit the word you're on
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
-
 -- It lets you paste what you yanked intead of what you deleted
 vim.keymap.set("n", "<leader>p", "\"0p") -- Paste it on the bottom
 vim.keymap.set("n", "<leader>P", "\"0P") -- Paste it on top 
@@ -52,7 +51,8 @@ vim.keymap.set("n", "<C-j>", ":cnext<CR>")
 vim.keymap.set("n", "<C-k>", ":cprevious<CR>")
 vim.keymap.set("n", "K", ":vim /<C-R><C-W>/ **<CR>:copen<CR>")
 
-
+-- Tmux-sessionizer
+vim.keymap.set('n', '<C-f>', ':terminal $HOME/.tmux/.tmux_sessionizer.sh<CR>i')
 
 -- LaTeX
 vim.keymap.set("n", "<leader>rl", ":!pdflatex '%:.'<CR>")
