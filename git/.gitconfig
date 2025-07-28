@@ -17,3 +17,5 @@
 	prompt = false
 [merge]
 	tool = nvimdiff
+[protocol "file"]
+	allow = always
