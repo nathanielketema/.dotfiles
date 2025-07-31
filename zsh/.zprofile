@@ -30,7 +30,7 @@ addToPathFront() {
 # Path
 addToPathFront $HOME/.zig
 
-alias ll="ls -lth"
+alias ll="ls -ltha"
 alias ez="eza --long --tree --level=3"
 alias vim='nvim'
 alias pf="fzf --preview='bat --color=always {}' --bind shift-up:preview-page-up,shift-down:preview-page-down"
@@ -56,7 +56,7 @@ alias tom314="ssh e2436@code.dsunix.net" # Assembly Language
 alias tom310="ssh c2417@code.dsunix.net" # Advanced Data Structures
 
 function note() {
-    cd "~/second_brain/notes/inbox/";
+    cd "$HOME/second_brain/notes/inbox/"
     nvim "$1.md"
 }
 
