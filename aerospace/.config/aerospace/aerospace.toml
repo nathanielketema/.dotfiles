@@ -245,6 +245,10 @@ if.app-id = 'com.trae.app'
 run = "move-node-to-workspace 8"
 
 [[on-window-detected]]
+if.app-id = 'com.appflowy.appflowy.flutter'
+run = "move-node-to-workspace A"
+
+[[on-window-detected]]
 if.app-id = 'com.apple.Music'
 run = ['layout floating', 'move-node-to-workspace M']
 
