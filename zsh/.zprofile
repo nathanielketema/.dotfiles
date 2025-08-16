@@ -41,7 +41,7 @@ alias gitllog="git log --graph --oneline --decorate --all"
 alias oldnotes="cd ~/Documents/Notes/; vim"
 alias .nvim="cd $HOME/.config/nvim/; vim"
 alias .zshrc="vim ~/.zshrc"
-alias brain="cd ~/second_brain/"
+alias brain="cd ~/second-brain/"
 alias pdfslide="pympress"
 
 # Class folders
@@ -56,7 +56,7 @@ alias tom314="ssh e2436@code.dsunix.net" # Assembly Language
 alias tom310="ssh c2417@code.dsunix.net" # Advanced Data Structures
 
 function note() {
-    cd "$HOME/second_brain/notes/inbox/"
+    cd "$HOME/second-brain/notes/inbox/"
     nvim "$1.md"
 }
 

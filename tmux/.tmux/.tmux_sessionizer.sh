@@ -9,9 +9,9 @@ else
         "$HOME/school/" \
         "$HOME/work/" \
         "$HOME/.dotfiles/" \
-        "$HOME/second_brain/" \
-        "$HOME/second_brain/notes/" \
-        "$HOME/second_brain/files/" \
+        "$HOME/second-brain/" \
+        "$HOME/second-brain/notes/" \
+        "$HOME/second-brain/files/" \
         -mindepth 1 -maxdepth 1 -type d 2>/dev/null | fzf)
 fi
 
