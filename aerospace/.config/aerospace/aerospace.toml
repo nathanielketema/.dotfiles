@@ -245,7 +245,7 @@ if.app-id = 'com.trae.app'
 run = "move-node-to-workspace 8"
 
 [[on-window-detected]]
-if.app-id = 'com.appflowy.appflowy.flutter'
+if.app-id = 'notion.id'
 run = "move-node-to-workspace A"
 
 [[on-window-detected]]
