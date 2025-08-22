@@ -28,7 +28,8 @@ addToPathFront() {
 }
 
 # Path
-addToPathFront $HOME/.zig
+addToPathFront $HOME/.zig14/
+addToPathFront $HOME/.zig/
 
 alias ll="ls -ltha"
 alias ez="eza --long --tree --level=3"
