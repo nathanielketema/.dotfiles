@@ -131,3 +131,4 @@ export DOTNET_ROOT="/opt/homebrew/opt/dotnet-sdk@8"
 
 # bun completions
 [ -s "/Users/nathaniel/.bun/_bun" ] && source "/Users/nathaniel/.bun/_bun"
+eval "$(zoxide init --cmd cd zsh)"
