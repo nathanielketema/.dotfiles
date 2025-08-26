@@ -128,6 +128,7 @@ ctrl-6 = 'workspace 6' # settings/appstore/floating
 alt-a = 'workspace A' # free
 alt-b = 'workspace B' # free
 alt-c = 'workspace C' # free
+alt-d = 'workspace D' # discord
 ctrl-7 = 'workspace 7' # microsoft
 ctrl-8 = 'workspace 8' # cursor/trae/vscode
 ctrl-9 = 'workspace 9' # safari
@@ -153,6 +154,7 @@ alt-shift-t = 'move-node-to-workspace T'
 alt-shift-a = 'move-node-to-workspace A'
 alt-shift-b = 'move-node-to-workspace B'
 alt-shift-c = 'move-node-to-workspace C'
+alt-shift-d = 'move-node-to-workspace D'
 
 ctrl-shift-f = 'fullscreen'
 
@@ -247,6 +249,10 @@ run = "move-node-to-workspace 8"
 [[on-window-detected]]
 if.app-id = 'notion.id'
 run = "move-node-to-workspace A"
+
+[[on-window-detected]]
+if.app-id = 'com.hnc.Discord'
+run = "move-node-to-workspace D"
 
 [[on-window-detected]]
 if.app-id = 'com.apple.Music'
