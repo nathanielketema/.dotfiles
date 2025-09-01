@@ -55,6 +55,7 @@ alias tom250="ssh b2320@cs.dsunix.net" # Computer Science 250
 alias tom300="ssh g2431@code.dsunix.net" # Data structures
 alias tom314="ssh e2436@code.dsunix.net" # Assembly Language
 alias tom310="ssh c2417@code.dsunix.net" # Advanced Data Structures
+alias tom410="ssh f2528@code.dsunix.net" # Parallel Computing
 
 function note() {
     cd "$HOME/second-brain/notes/inbox/"
