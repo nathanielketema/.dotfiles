@@ -6,6 +6,7 @@ else
     selected=$(find \
         "$HOME/" \
         "$HOME/personal/" \
+        "$HOME/personal/MindEase/" \
         "$HOME/school/" \
         "$HOME/work/" \
         "$HOME/.dotfiles/" \
