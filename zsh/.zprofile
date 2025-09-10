@@ -63,7 +63,7 @@ function note() {
     nvim "$1.md"
 }
 
-function latex() {
+function new_latex() {
     mkdir "./$1";
     cd "./$1";
     nvim "$1.tex"
