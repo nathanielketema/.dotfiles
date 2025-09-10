@@ -1,18 +1,18 @@
-vim.g.mapleader = " " -- <leader>
-vim.keymap.set("n", "-", "<cmd>Ex<CR>") -- open netrw
+vim.g.mapleader = " "                     -- <leader>
+vim.keymap.set("n", "-", "<cmd>Ex<CR>")   -- open netrw
 vim.keymap.set("n", "_", "<cmd>Sex!<CR>") -- open netrw on a side window
 vim.keymap.set("n", "x", '"_x')
 
-vim.keymap.set("n", "<C-u>", "<C-u>zz") -- Centers the cursor when moving up
-vim.keymap.set("n", "<C-d>", "<C-d>zz") -- Centers the cursor when moving down
+vim.keymap.set("n", "<C-u>", "<C-u>zz")            -- Centers the cursor when moving up
+vim.keymap.set("n", "<C-d>", "<C-d>zz")            -- Centers the cursor when moving down
 
-vim.keymap.set("n", "n", "nzzzv") -- After searching with /, it centers the cursor, next
-vim.keymap.set("n", "N", "Nzzzv") -- After searching with /, it centers the cursor, previous
+vim.keymap.set("n", "n", "nzzzv")                  -- After searching with /, it centers the cursor, next
+vim.keymap.set("n", "N", "Nzzzv")                  -- After searching with /, it centers the cursor, previous
 
-vim.keymap.set("n", "<leader>to", ":tabnew<CR>") -- open new tab
+vim.keymap.set("n", "<leader>to", ":tabnew<CR>")   -- open new tab
 vim.keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
-vim.keymap.set("n", "<leader>tn", ":tabn<CR>") --  go to next tab
-vim.keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
+vim.keymap.set("n", "<leader>tn", ":tabn<CR>")     --  go to next tab
+vim.keymap.set("n", "<leader>tp", ":tabp<CR>")     --  go to previous tab
 
 -- Moves the highlighted part. It even indents automatically
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -30,7 +30,7 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 
 -- It lets you paste what you yanked intead of what you deleted
 vim.keymap.set("n", "<leader>p", "\"0p") -- Paste it on the bottom
-vim.keymap.set("n", "<leader>P", "\"0P") -- Paste it on top 
+vim.keymap.set("n", "<leader>P", "\"0P") -- Paste it on top
 
 -- Remaping the Esc key in insert mode
 vim.keymap.set("i", "jk", "<Esc>")
@@ -39,11 +39,14 @@ vim.keymap.set("i", "kj", "<Esc>")
 -- This lets you go to normal mode in the neovim terminal
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 
--- This lets you into terminal mode 
+-- This lets you into terminal mode
 vim.keymap.set("n", "<leader>hter", ":10 split<cr><c-w>j:ter<cr>i")
-vim.keymap.set("n", "run", ":80 vsplit<cr><c-w>l:ter<cr>i")
-
-vim.keymap.set("n", "<leader>go", ":Goyo<CR>")
+vim.keymap.set("n", "<leader>nt", function()
+    vim.cmd.vnew()
+    vim.cmd.term()
+    vim.cmd.wincmd("J")
+    vim.api.nvim_win_set_height(0, 5)
+end)
 
 -- Shortcut for Quickfix list
 vim.keymap.set("n", "<leader>q", ":copen<CR>")
