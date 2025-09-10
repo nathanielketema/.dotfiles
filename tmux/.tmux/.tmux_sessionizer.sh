@@ -13,6 +13,7 @@ else
         "$HOME/second-brain/" \
         "$HOME/second-brain/notes/" \
         "$HOME/second-brain/files/" \
+        "/Users/nathaniel/Library/Mobile Documents/com~apple~CloudDocs/School/3-Fall 2025" \
         -mindepth 1 -maxdepth 1 -type d 2>/dev/null | fzf)
 fi
 
