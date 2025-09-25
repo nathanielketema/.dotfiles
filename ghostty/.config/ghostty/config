@@ -1,4 +1,4 @@
-theme = "tokyonight-storm"
+theme = "TokyoNight Night"
 font-size = 14
 font-feature = -liga
 shell-integration-features = "no-cursor, title"
