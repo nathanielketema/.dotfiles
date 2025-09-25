@@ -264,7 +264,7 @@ run = ['layout floating', 'move-node-to-workspace N']
 
 [[on-window-detected]]
 if.app-id = 'md.obsidian'
-run = ['layout floating', 'move-node-to-workspace N']
+run = "move-node-to-workspace N"
 
 [[on-window-detected]]
 if.app-id = 'com.apple.Preview'
