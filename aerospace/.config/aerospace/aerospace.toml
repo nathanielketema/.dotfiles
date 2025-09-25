@@ -220,7 +220,7 @@ run = ['layout floating', 'move-node-to-workspace 6']
 
 [[on-window-detected]]
 if.app-id = 'com.apple.MobileSMS'
-run = ['layout floating', 'move-node-to-workspace 6']
+run = "move-node-to-workspace 6"
 
 [[on-window-detected]]
 if.app-id = 'com.microsoft.Word'
