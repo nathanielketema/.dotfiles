@@ -49,6 +49,7 @@ alias pdfslide="pympress"
 alias sp24="cd /Users/nathaniel/Library/Mobile\ Documents/com~apple~CloudDocs/School/1-Spring\ 2024"
 alias fall24="cd /Users/nathaniel/Library/Mobile\ Documents/com~apple~CloudDocs/School/2-Fall\ 2024"
 alias sp25="cd /Users/nathaniel/Library/Mobile\ Documents/com~apple~CloudDocs/School/2-Spring\ 2025"
+alias fall25="cd /Users/nathaniel/Library/Mobile\ Documents/com~apple~CloudDocs/School/3-Fall\ 2025"
 
 # Tom's ssh aliases for his classes
 alias tom250="ssh b2320@cs.dsunix.net" # Computer Science 250
