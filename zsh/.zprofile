@@ -30,6 +30,7 @@ addToPathFront() {
 # Path
 addToPathFront $HOME/.zig/
 addToPathFront /opt/homebrew/opt/postgresql@16/bin
+addToPathFront $HOME/.outfieldr/zig-out/bin/
 
 alias ll="ls -ltha"
 alias ez="eza --long --tree --level=3"
