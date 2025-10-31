@@ -1,23 +1,19 @@
-snippet initCode
+snippet ziginit
 const std = @import("std");
-const print = std.debug.print;
-const testing = std.testing;
 const assert = std.debug.assert;
+const testing = std.testing;
+const Allocator = std.mem.Allocator;
 
+$0
 
-pub fn main() !void {
-    print("hello world\n", .{});
-    $0
-}
-
-test "test name" {
+test "description" {
 }
 endsnippet
 
-snippet compi
+snippet zlog
 @compileLog(@TypeOf($0));
 endsnippet
 
-snippet pp 
-print("$1{}\n", .{$0});
+snippet zprint
+std.debug.print("$1 \n", .{$0});
 endsnippet
