@@ -256,7 +256,7 @@ run = "move-node-to-workspace D"
 
 [[on-window-detected]]
 if.app-id = 'com.apple.Music'
-run = ['layout floating', 'move-node-to-workspace M']
+run = "move-node-to-workspace M"
 
 [[on-window-detected]]
 if.app-id = 'com.apple.Notes'
