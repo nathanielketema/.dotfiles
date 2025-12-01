@@ -62,6 +62,7 @@ return {
             lspconfig.yamlls.setup({
                 capabilities = capabilities,
             })
+            --[[
             lspconfig.zls.setup({
                 capabilities = capabilities,
                 settings = {
@@ -70,6 +71,7 @@ return {
                     },
                 },
             })
+            ]]
 
             vim.diagnostic.config({
                 virtual_text = {
