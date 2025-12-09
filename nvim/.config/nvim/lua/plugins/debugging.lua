@@ -13,7 +13,6 @@ return {
 			dapui.setup()
 			local python_path = "/opt/homebrew/bin/python3"
 			require("dap-python").setup(python_path)
-
 			dap.adapters.codelldb = {
 				type = "server",
 				port = "${port}",
@@ -22,9 +21,7 @@ return {
 					args = { "--port", "${port}" },
 				},
 			}
-
 			vim.g.dap_virtual_text = true
-
 			dap.configurations.zig = {
 				{
 					name = "Launch",
@@ -67,16 +64,13 @@ return {
 				},
 			}
 
-			dap.listeners.before.attach.dapui_config = function()
+			dap.listeners.after.event_initialized["dapui_config"] = function()
 				dapui.open()
 			end
-			dap.listeners.before.launch.dapui_config = function()
-				dapui.open()
-			end
-			dap.listeners.before.event_terminated.dapui_config = function()
+			dap.listeners.before.event_terminated["dapui_config"] = function()
 				dapui.close()
 			end
-			dap.listeners.before.event_exited.dapui_config = function()
+			dap.listeners.before.event_exited["dapui_config"] = function()
 				dapui.close()
 			end
 
