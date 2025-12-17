@@ -212,7 +212,7 @@ run = ['layout floating', 'move-node-to-workspace 5']
 
 [[on-window-detected]]
 if.app-id = 'com.apple.FaceTime'
-run = "move-node-to-workspace 5"
+run = ['layout floating', 'move-node-to-workspace 5']
 
 [[on-window-detected]]
 if.app-id = 'com.apple.AppStore'
