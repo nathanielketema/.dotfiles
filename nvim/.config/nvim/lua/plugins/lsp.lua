@@ -1,7 +1,7 @@
 return {
 	{
 		"williamboman/mason.nvim",
-        cmd = "Mason",
+		cmd = "Mason",
 		config = function()
 			require("mason").setup()
 		end,
@@ -37,8 +37,9 @@ return {
 				"cssls",
 				"jsonls",
 				"marksman",
-                "ty",
+				"ty",
 				"yamlls",
+				"zls",
 			}
 
 			for _, server in ipairs(servers) do
@@ -50,6 +51,7 @@ return {
 			vim.lsp.config("jdtls", {
 				capabilities = capabilities,
 			})
+
 
 			for _, server in ipairs(servers) do
 				vim.lsp.enable(server)
