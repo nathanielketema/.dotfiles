@@ -15,6 +15,9 @@ export VISUAL="/opt/homebrew/bin/nvim"
 export GIT_EDITOR="$VIM"
 export DOTFILES="$HOME/.dotfiles/"
 
+# ZVM
+export ZVM_INSTALL="$HOME/.zvm/self"
+
 addToPath() {
     if [[ "$PATH" != *"$1"* ]]; then
         export PATH=$PATH:$1
@@ -33,6 +36,8 @@ addToPathFront /opt/homebrew/opt/postgresql@16/bin
 addToPathFront $HOME/.outfieldr/zig-out/bin/ # zldr
 addToPathFront $HOME/.local/bin/
 addToPathFront $HOME/.cargo/bin/
+addToPathFront $HOME/.zvm/bin
+addToPathFront $ZVM_INSTALL
 
 alias ll="ls -ltha"
 alias ez="eza --long --tree --level=3"
