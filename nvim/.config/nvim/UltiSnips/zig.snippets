@@ -1,12 +1,15 @@
-snippet ziginit
+snippet zinit
 const std = @import("std");
+const Io = std.Io;
+const Allocator = std.mem.Allocator;
 const assert = std.debug.assert;
 const testing = std.testing;
-const Allocator = std.mem.Allocator;
 
-$0
+pub fn main() !void {
+    $0
+}
 
-test "description" {
+test "foo" {
 }
 endsnippet
 
