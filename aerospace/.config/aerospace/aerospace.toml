@@ -255,6 +255,10 @@ if.app-id = 'com.utmapp.UTM'
 run = ['layout floating', 'move-node-to-workspace C']
 
 [[on-window-detected]]
+if.app-id = 'com.vmware.vmrc'
+run = ['layout floating', 'move-node-to-workspace C']
+
+[[on-window-detected]]
 if.app-id = 'com.hnc.Discord'
 run = "move-node-to-workspace D"
 
