@@ -15,16 +15,10 @@ return {
 		},
 	},
 	{
-		"nvim-java/nvim-java",
-		lazy = true,
-	},
-	{
 		"neovim/nvim-lspconfig",
 		lazy = false,
 
 		config = function()
-			require("java").setup()
-
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 			local servers = {
@@ -48,16 +42,9 @@ return {
 				})
 			end
 
-			vim.lsp.config("jdtls", {
-				capabilities = capabilities,
-			})
-
-
 			for _, server in ipairs(servers) do
 				vim.lsp.enable(server)
 			end
-
-			vim.lsp.enable("jdtls")
 
 			vim.diagnostic.config({
 				virtual_text = {
