@@ -1,0 +1,28 @@
+{
+    "initPy": {
+        "prefix": "initPy",
+        "body": [
+            "import sys",
+            "import unittest",
+            "",
+            "",
+            "def main():",
+            "    print(\"hello world\")",
+            "    $0",
+            "",
+            "",
+            "class TestClassName(unittest.TestCase):",
+            "    # Function names must start with test_",
+            "    def test_eachTestFunctions(self):",
+            "        # eg: self.assertEqual()",
+            "        pass",
+            "",
+            "",
+            "if __name__ == \"__main__\":",
+            "    if len(sys.argv) > 1 and sys.argv[1] == \"test\":",
+            "        _ = unittest.main(argv=sys.argv[:1])",
+            "    else:",
+            "        main()"
+        ]
+    }
+}

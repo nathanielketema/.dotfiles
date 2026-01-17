@@ -1,0 +1,27 @@
+{
+    "zinit": {
+        "prefix": "zinit",
+        "body": [
+            "const std = @import(\"std\");",
+            "const Io = std.Io;",
+            "const Allocator = std.mem.Allocator;",
+            "const assert = std.debug.assert;",
+            "const testing = std.testing;",
+            "",
+            "pub fn main() !void {",
+            "    $0",
+            "}",
+            "",
+            "test \"foo\" {",
+            "}"
+        ]
+    },
+    "zlog": {
+        "prefix": "zlog",
+        "body": "@compileLog(@TypeOf($0));"
+    },
+    "zprint": {
+        "prefix": "zprint",
+        "body": "std.debug.print(\"$1\\n\", .{$0});"
+    }
+}

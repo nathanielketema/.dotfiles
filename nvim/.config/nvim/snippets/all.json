@@ -1,0 +1,11 @@
+{
+    "today": {
+        "prefix": "today",
+        "body": [
+            "${1:Date}",
+            "---",
+            "$0"
+        ],
+        "description": "Todays date placeholder"
+    }
+}
