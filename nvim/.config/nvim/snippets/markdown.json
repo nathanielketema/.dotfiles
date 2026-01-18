@@ -31,5 +31,44 @@
             "",
             "- [ ] "
         ]
+    },
+    "pandoc": {
+        "prefix": "pandoc",
+        "body": [
+            "---",
+            "title: \"$1\"",
+            "author: \"$2\"",
+            "date: \today",
+            "geometry: margin=1in",
+            "fontsize: 12pt",
+            "linkcolor: blue",
+            "numbersections: true",
+            "mainfont: \"Times New Roman\"",
+            "monofont: \"Courier New\"",
+            "header-includes:",
+            " - |",
+            "   \\usepackage{tcolorbox}",
+            "   \\usepackage{etoolbox}",
+            "   \\tcbuselibrary{skins,breakable}",
+            "   \\BeforeBeginEnvironment{Highlighting}{%",
+            "     \\begin{tcolorbox}[",
+            "       colback=gray!5,",
+            "       colframe=gray!50,",
+            "       arc=2pt,",
+            "       boxrule=0.5pt,",
+            "       left=6pt,",
+            "       right=6pt,",
+            "       top=6pt,",
+            "       bottom=6pt,",
+            "       enlarge left by=10pt,",
+            "       width=\\linewidth-10pt,",
+            "       breakable",
+            "     ]%",
+            "   }",
+            "   \\AfterEndEnvironment{Highlighting}{\\end{tcolorbox}}",
+            "---",
+            "",
+            "$0"
+        ]
     }
 }

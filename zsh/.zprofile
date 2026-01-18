@@ -38,6 +38,7 @@ addToPathFront $HOME/.local/bin/
 addToPathFront $HOME/.cargo/bin/
 addToPathFront $HOME/.zvm/bin
 addToPathFront $ZVM_INSTALL
+addToPath $HOME/.scripts/
 
 alias ll="ls -ltha"
 alias ez="eza --long --tree --level=3"
@@ -52,6 +53,8 @@ alias .nvim="cd $HOME/.config/nvim/; vim"
 alias .zshrc="vim ~/.zshrc"
 alias brain="cd ~/second-brain/"
 alias pdfslide="pympress"
+alias s="source ~/.zprofile"
+alias ss="source ~/.zshrc"
 
 # Class folders
 alias sp24="cd /Users/nathaniel/Library/Mobile\ Documents/com~apple~CloudDocs/School/1-Spring\ 2024"
