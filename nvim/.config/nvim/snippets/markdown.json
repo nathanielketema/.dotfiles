@@ -38,7 +38,7 @@
             "---",
             "title: \"$1\"",
             "author: \"$2\"",
-            "date: \today",
+            "date: \\today",
             "geometry: margin=1in",
             "fontsize: 12pt",
             "linkcolor: blue",
@@ -67,6 +67,10 @@
             "   }",
             "   \\AfterEndEnvironment{Highlighting}{\\end{tcolorbox}}",
             "---",
+            "",
+            "\\begin{center}",
+            "\\LARGE\\bfseries $3",
+            "\\end{center}",
             "",
             "$0"
         ]
