@@ -127,8 +127,9 @@ ctrl-5 = 'workspace 5' # zoom
 ctrl-6 = 'workspace 6' # settings/appstore/floating
 alt-a = 'workspace A' # free
 alt-b = 'workspace B' # free
-alt-c = 'workspace C' # free
+alt-c = 'workspace C' # vm
 alt-d = 'workspace D' # discord
+alt-f = 'workspace F' # finder
 ctrl-7 = 'workspace 7' # microsoft
 ctrl-8 = 'workspace 8' # cursor/trae/vscode
 ctrl-9 = 'workspace 9' # safari
@@ -257,6 +258,10 @@ run = ['layout floating', 'move-node-to-workspace C']
 [[on-window-detected]]
 if.app-id = 'com.vmware.vmrc'
 run = ['layout floating', 'move-node-to-workspace C']
+
+[[on-window-detected]]
+if.app-id = 'com.apple.finder'
+run = ['layout floating', 'move-node-to-workspace F']
 
 [[on-window-detected]]
 if.app-id = 'com.hnc.Discord'
