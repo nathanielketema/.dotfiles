@@ -2,6 +2,19 @@ return {
 	"stevearc/conform.nvim",
 	event = { "BufWritePre" },
 	cmd = { "ConformInfo" },
+	keys = {
+		{
+			"<leader>bf",
+			function()
+				require("conform").format({
+					lsp_fallback = true,
+					timeout_ms = 1000,
+				})
+			end,
+			mode = "n",
+			desc = "Format buffer",
+		},
+	},
 	opts = {
 		formatters_by_ft = {
 			lua = { "stylua" },
@@ -18,13 +31,4 @@ return {
 			zig = { "zigfmt" },
 		},
 	},
-	config = function(_, opts)
-		require("conform").setup(opts)
-		vim.keymap.set("n", "<leader>bf", function()
-			require("conform").format({
-				lsp_fallback = true,
-				timeout_ms = 1000,
-			})
-		end, {})
-	end,
 }
