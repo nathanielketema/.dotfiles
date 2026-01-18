@@ -5,6 +5,26 @@ return {
 		opts = {},
 	},
 	{
+		"WhoIsSethDaniel/mason-tool-installer.nvim",
+		opts = {
+			ensure_installed = {
+				"stylua",
+				"prettier",
+				"clang-format",
+				"jq",
+				"prettier",
+				"ruff",
+				"shfmt",
+				"sqruff",
+				"stylua",
+				"superhtml",
+				"tex-fmt",
+				"textlint",
+				"yq",
+			},
+		},
+	},
+	{
 		"neovim/nvim-lspconfig",
 		dependencies = {
 			"williamboman/mason-lspconfig.nvim",

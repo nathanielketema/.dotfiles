@@ -1,14 +1,20 @@
 return {
     "nvim-treesitter/nvim-treesitter",
-    lazy = false,
+    build = ":TSUpdate",
     dependencies = {
         "nvim-treesitter/nvim-treesitter-textobjects",
     },
-    build = ":TSUpdate",
-    event = { "BufReadPost", "BufNewFile" },
     opts = {
         ensure_installed = {
-            "zig", "python", "c", "cpp", "lua", "markdown", "markdown_inline", "html", "css",
+            "zig",
+            "python",
+            "c",
+            "cpp",
+            "lua",
+            "markdown",
+            "markdown_inline",
+            "html",
+            "css",
         },
 
         sync_install = false,
@@ -60,4 +66,7 @@ return {
             },
         },
     },
+    config = function(_, opts)
+        require("nvim-treesitter.configs").setup(opts)
+    end,
 }
