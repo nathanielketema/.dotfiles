@@ -2,20 +2,16 @@
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zprofile.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zprofile.pre.zsh"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-export XDG_CONFIG_HOME=$HOME/.config
 VIM="nvim"
 
-# Added by Toolbox App
-export PATH="$PATH:/Users/nathaniel/Library/Application Support/JetBrains/Toolbox/scripts"
+export XDG_CONFIG_HOME=$HOME/.config
 
-# nvim
 export EDITOR="/opt/homebrew/bin/nvim"
 export C_INCLUDE_PATH="/usr/local/include"
 export VISUAL="/opt/homebrew/bin/nvim"
 export GIT_EDITOR="$VIM"
 export DOTFILES="$HOME/.dotfiles/"
 
-# ZVM
 export ZVM_INSTALL="$HOME/.zvm/self"
 
 addToPath() {
@@ -30,7 +26,6 @@ addToPathFront() {
     fi
 }
 
-# Path
 addToPathFront $HOME/.zig/
 addToPathFront /opt/homebrew/opt/postgresql@16/bin
 addToPathFront $HOME/.outfieldr/zig-out/bin/ # zldr
@@ -38,6 +33,7 @@ addToPathFront $HOME/.local/bin/
 addToPathFront $HOME/.cargo/bin/
 addToPathFront $HOME/.zvm/bin
 addToPathFront $ZVM_INSTALL
+addToPathFront $HOME/.bun/bin/
 addToPath $HOME/.scripts/
 
 alias ll="ls -ltha"
@@ -56,11 +52,8 @@ alias pdfslide="pympress"
 alias s="source ~/.zprofile"
 alias ss="source ~/.zshrc"
 
-# Class folders
 alias school="cd /Users/nathaniel/Library/Mobile\ Documents/com~apple~CloudDocs/School/"
 
-
-# Tom's ssh aliases for his classes
 alias tom250="ssh b2320@cs.dsunix.net" # Computer Science 250
 alias tom300="ssh g2431@code.dsunix.net" # Data structures
 alias tom314="ssh e2436@code.dsunix.net" # Assembly Language
@@ -79,22 +72,20 @@ function new_latex() {
 }
 
 function sessionizer_widget() {
-  zle -I  # clear any pending input
+  zle -I
   '/Users/nathaniel/.tmux/.tmux_sessionizer.sh'
-  zle reset-prompt  # refresh prompt after script runs
+  zle reset-prompt
 }
 zle -N sessionizer_widget
 bindkey '^F' sessionizer_widget
 
 function sessionizer_jump_widget() {
-  zle -I  # clear any pending input
+  zle -I
   '/Users/nathaniel/.tmux/.tjump.sh'
-  zle reset-prompt  # refresh prompt after script runs
+  zle reset-prompt
 }
 zle -N sessionizer_jump_widget
 bindkey '^J' sessionizer_jump_widget
 
 # Q post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zprofile.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zprofile.post.zsh"
-# Add .NET Core SDK tools
-export PATH="$PATH:/Users/nathaniel/.dotnet/tools"
