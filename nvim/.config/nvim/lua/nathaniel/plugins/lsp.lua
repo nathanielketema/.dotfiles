@@ -39,7 +39,7 @@ return {
 				marksman = {},
 				yamlls = {},
 				superhtml = {},
-				ty = {},
+                pyrefly = {},
 				texlab = {},
 				zls = {
 					settings = {
