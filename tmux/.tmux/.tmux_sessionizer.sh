@@ -6,14 +6,13 @@ else
     selected=$(find \
         "$HOME/" \
         "$HOME/personal/" \
-        "$HOME/personal/MindEase/" \
         "$HOME/school/" \
         "$HOME/work/" \
         "$HOME/.dotfiles/" \
-        "$HOME/second-brain/" \
-        "$HOME/second-brain/notes/" \
-        "$HOME/second-brain/files/" \
-        "/Users/nathaniel/Library/Mobile Documents/com~apple~CloudDocs/School/3-Spring-2026/" \
+        "$HOME/personal/second_brain/" \
+        "$HOME/personal/second-brain/notes/" \
+        "$HOME/personal/second-brain/files/" \
+        "$HOME/school/dsu/3-spring-2026/" \
         -mindepth 1 -maxdepth 1 -type d 2>/dev/null | fzf)
 fi
 

@@ -50,8 +50,6 @@ alias .zshrc="vim ~/.zshrc"
 alias brain="cd ~/second-brain/"
 alias pdfslide="pympress"
 
-alias school="cd /Users/nathaniel/Library/Mobile\ Documents/com~apple~CloudDocs/School/"
-
 alias tom250="ssh b2320@cs.dsunix.net" # Computer Science 250
 alias tom300="ssh g2431@code.dsunix.net" # Data structures
 alias tom314="ssh e2436@code.dsunix.net" # Assembly Language
@@ -65,7 +63,7 @@ function s() {
 }
 
 function note() {
-    cd "$HOME/second-brain/notes/inbox/"
+    cd "$HOME/personal/second-brain/notes/inbox/"
     nvim "$1.md"
 }
 
