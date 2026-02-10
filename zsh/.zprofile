@@ -36,8 +36,8 @@ addToPathFront $ZVM_INSTALL
 addToPathFront $HOME/.bun/bin/
 addToPath $HOME/.scripts/
 
-alias ls="eza --tree --level 3 --icons --git"
-alias ll="eza --long --tree --level 4 --icons --git --all"
+alias els="eza --tree --level 2 --icons --git"
+alias ell="eza --long --tree --level 2 --icons --git --all"
 alias vim='nvim'
 alias pf="fzf --preview='bat --color=always {}' --bind shift-up:preview-page-up,shift-down:preview-page-down"
 alias grep="grep --color=auto"
