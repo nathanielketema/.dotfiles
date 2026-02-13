@@ -42,3 +42,14 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 vim.g.netrw_localrmdir='rm -r'
+
+-- Recognize #!/usr/bin/env bun
+vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
+  pattern = "*",
+  callback = function(args)
+    local first_line = vim.fn.getline(1, args.buf)
+    if first_line[1]:match("^#!.*bin/env bun") then
+      vim.bo[args.buf].filetype = "javascript"
+    end
+  end,
+})
