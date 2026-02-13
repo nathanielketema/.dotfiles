@@ -75,7 +75,7 @@ function new_latex() {
 
 function sessionizer_widget() {
   zle -I
-  '/Users/nathaniel/.tmux/.tmux_sessionizer.sh'
+  '$HOME/.scripts/tmux_sessionizer'
   zle reset-prompt
 }
 zle -N sessionizer_widget
@@ -83,7 +83,7 @@ bindkey '^F' sessionizer_widget
 
 function sessionizer_jump_widget() {
   zle -I
-  '/Users/nathaniel/.tmux/.tjump.sh'
+  '$HOME/.scripts/tmux_jump'
   zle reset-prompt
 }
 zle -N sessionizer_jump_widget
