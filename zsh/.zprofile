@@ -11,6 +11,7 @@ export C_INCLUDE_PATH="/usr/local/include"
 export VISUAL="/opt/homebrew/bin/nvim"
 export GIT_EDITOR="$VIM"
 export DOTFILES="$HOME/.dotfiles/"
+export HOMEBREW_NO_ENV_HINTS=1
 
 export ZVM_INSTALL="$HOME/.zvm/self"
 
