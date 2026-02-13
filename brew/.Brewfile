@@ -1,9 +1,9 @@
-tap "anomalyco/tap/opencode"
+tap "anomalyco/tap"
 tap "homebrew/cask"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "jesseduffield/lazygit"
-tap "nikitabobko/tap/aerospace"
+tap "nikitabobko/tap"
 
 brew "autoconf"
 brew "btop"
@@ -17,14 +17,23 @@ brew "gh" # Github client
 brew "git"
 brew "go"
 brew "htop"
-brew "hyperfine" Benchmarking tool
+
+# Benchmarking tool
+brew "hyperfine" 
+
 brew "imagemagick"
 brew "lazygit"
-brew "less" # Because Mac ships with outdated less
+
+# Because Mac ships with outdated less
+brew "less" 
+
 brew "lld@20"
 brew "llvm@20"
 brew "luarocks"
-brew "mpv" # Media player
+
+# Media player
+brew "mpv"
+
 brew "neovim"
 brew "ninja"
 brew "node"
@@ -41,7 +50,9 @@ brew "urlview"
 brew "uv"
 brew "wget"
 brew "yazi"
-brew "zoxide" # Better cd
+
+# Better cd
+brew "zoxide"
 
 cask "appcleaner"
 cask "discord"
@@ -52,7 +63,7 @@ cask "hammerspoon"
 cask "imageoptim"
 cask "microsoft-teams"
 cask "mullvad-vpn"
-cask "nikitabobko/tap/aerospace"
+cask "aerospace"
 cask "obsidian"
 cask "raycast"
 cask "telegram"
