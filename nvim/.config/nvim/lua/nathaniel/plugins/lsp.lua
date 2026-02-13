@@ -8,8 +8,6 @@ return {
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
 		opts = {
 			ensure_installed = {
-				"stylua",
-				"prettier",
 				"clang-format",
 				"jq",
 				"prettier",
@@ -32,26 +30,27 @@ return {
 		},
 		opts = {
 			servers = {
-				ruff = {},
 				clangd = {},
 				cssls = {},
 				jsonls = {},
+                lua_ls = {
+                    settings = {
+                        Lua = {
+                            diagnostics = { globals = { "vim" } },
+                            workspace = { checkThirdParty = false },
+                        },
+                    },
+                },
 				marksman = {},
-				yamlls = {},
+				ruff = {},
 				superhtml = {},
-                pyrefly = {},
 				texlab = {},
+				yamlls = {},
+                pyrefly = {},
+                ts_ls = {},
 				zls = {
 					settings = {
 						filetypes = { "zig", "zir", "zon" },
-					},
-				},
-				lua_ls = {
-					settings = {
-						Lua = {
-							diagnostics = { globals = { "vim" } },
-							workspace = { checkThirdParty = false },
-						},
 					},
 				},
 			},
