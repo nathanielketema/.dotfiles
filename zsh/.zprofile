@@ -34,7 +34,7 @@ addToPathFront $HOME/.cargo/bin/
 addToPathFront $HOME/.zvm/bin
 addToPathFront $ZVM_INSTALL
 addToPathFront $HOME/.bun/bin/
-addToPath $HOME/.scripts/
+addToPath $HOME/scripts/
 
 alias els="eza --tree --level 2 --icons --git"
 alias ell="eza --long --tree --level 2 --icons --git --all"
@@ -75,7 +75,7 @@ function new_latex() {
 
 function sessionizer_widget() {
   zle -I
-  '$HOME/.scripts/tmux_sessionizer'
+  '$HOME/scripts/tmux_sessionizer'
   zle reset-prompt
 }
 zle -N sessionizer_widget
@@ -83,7 +83,7 @@ bindkey '^F' sessionizer_widget
 
 function sessionizer_jump_widget() {
   zle -I
-  '$HOME/.scripts/tmux_jump'
+  '$HOME/scripts/tmux_jump'
   zle reset-prompt
 }
 zle -N sessionizer_jump_widget
