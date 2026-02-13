@@ -1,0 +1,29 @@
+[core]
+	autocrlf = input
+	editor = nvim
+	excludesFile = $HOME/.config/git/exclude
+[user]
+	name = Nathaniel Ketema
+	email = nathanielketema@gmail.com
+[init]
+	defaultBranch = main
+[push]
+    default = "current"
+    autoSetupRemote = true
+[pull]
+	rebase = true
+[fetch]
+    prune = true
+[diff]
+	tool = nvimdiff
+    colormoved = "default"
+    colormovedws = "allow-indentation-change"
+[difftool]
+    prompt = false
+[branch]
+    sort= "committerdate"
+[merge]
+    tool = nvimdiff
+    conflictstyle = "diff3"
+[advice]
+    detachedHead = false
