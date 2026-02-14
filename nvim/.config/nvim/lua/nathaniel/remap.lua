@@ -41,12 +41,7 @@ vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 
 -- This lets you into terminal mode
 vim.keymap.set("n", "<leader>hter", ":10 split<cr><c-w>j:ter<cr>i")
-vim.keymap.set("n", "<leader>nt", function()
-    vim.cmd.vnew()
-    vim.cmd.term()
-    vim.cmd.wincmd("J")
-    vim.api.nvim_win_set_height(0, 5)
-end)
+vim.keymap.set("n", "<leader>nt", ":vsplit | terminal<CR>i")
 
 -- Shortcut for Quickfix list
 vim.keymap.set("n", "<leader>q", ":copen<CR>")
