@@ -53,3 +53,10 @@ vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
     end
   end,
 })
+
+vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
+  pattern = "Brewfile",
+  callback = function(args)
+    vim.bo[args.buf].filetype = "ruby"
+  end,
+})

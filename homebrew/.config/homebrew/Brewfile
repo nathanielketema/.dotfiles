@@ -8,32 +8,23 @@ tap "nikitabobko/tap"
 brew "autoconf"
 brew "btop"
 brew "cmake"
-brew "eza" # Better ls
+brew "eza"
 brew "fastfetch"
-brew "fd" # Easier find
+brew "fd"
 brew "ffmpeg"
 brew "fzf"
-brew "gh" # Github client
+brew "gh"
 brew "git"
 brew "go"
 brew "htop"
-
-# Benchmarking tool
 brew "hyperfine" 
-
 brew "imagemagick"
 brew "lazygit"
-
-# Because Mac ships with outdated less
 brew "less" 
-
 brew "lld@20"
 brew "llvm@20"
 brew "luarocks"
-
-# Media player
 brew "mpv"
-
 brew "neovim"
 brew "ninja"
 brew "node"
@@ -50,8 +41,6 @@ brew "urlview"
 brew "uv"
 brew "wget"
 brew "yazi"
-
-# Better cd
 brew "zoxide"
 
 cask "aerospace"
@@ -74,6 +63,5 @@ cask "zen"
 cask "zoom"
 
 # Uncomment to install
-#cask "google-chrome"
 #cask "calibre"
-
+#cask "google-chrome"
