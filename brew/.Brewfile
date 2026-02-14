@@ -54,8 +54,10 @@ brew "yazi"
 # Better cd
 brew "zoxide"
 
+cask "aerospace"
 cask "appcleaner"
 cask "discord"
+cask "docker-desktop"
 cask "dropzone"
 cask "font-hack-nerd-font"
 cask "ghostty"
@@ -63,10 +65,15 @@ cask "hammerspoon"
 cask "imageoptim"
 cask "microsoft-teams"
 cask "mullvad-vpn"
-cask "aerospace"
 cask "obsidian"
 cask "raycast"
 cask "telegram"
 cask "visual-studio-code"
+cask "webull"
 cask "zen"
 cask "zoom"
+
+# Uncomment to install
+#cask "google-chrome"
+#cask "calibre"
+
