@@ -15,6 +15,13 @@ return {
 		kind = "vsplit",
 		disable_line_numbers = false,
 		disable_relative_line_numbers = false,
+		signs = {
+			-- { CLOSED, OPENED }
+			hunk = { "", "" },
+			item = { "▶︎", "▼" },
+			section = { "▶︎", "▼" },
+
+		},
 		commit_editor = {
 			kind = "auto",
 			show_staged_diff = true,
