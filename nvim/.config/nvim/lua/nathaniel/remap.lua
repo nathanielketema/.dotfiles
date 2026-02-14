@@ -1,6 +1,5 @@
 vim.g.mapleader = " "                     -- <leader>
-vim.keymap.set("n", "-", "<cmd>Ex<CR>")   -- open netrw
-vim.keymap.set("n", "_", "<cmd>Sex!<CR>") -- open netrw on a side window
+vim.keymap.set("n", "-", ":Dired<CR>")
 vim.keymap.set("n", "x", '"_x')
 
 vim.keymap.set("n", "<C-u>", "<C-u>zz")            -- Centers the cursor when moving up
