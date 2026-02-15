@@ -37,19 +37,19 @@ addToPathFront $ZVM_INSTALL
 addToPathFront $HOME/.bun/bin/
 addToPathFront $HOME/personal/scripts/
 
-alias els="eza --tree --level 2 --icons --git"
-alias ell="eza --long --tree --level 2 --icons --git --all"
-alias vim='nvim'
-alias pf="fzf --preview='bat --color=always {}' --bind shift-up:preview-page-up,shift-down:preview-page-down"
-alias grep="grep --color=auto"
-alias lgit="lazygit"
-alias gitlog="git --no-pager log --graph --oneline --decorate --all"
-alias gitllog="git log --graph --oneline --decorate --all"
-alias oldnotes="cd ~/Documents/Notes/; vim"
 alias .nvim="cd $HOME/.config/nvim/; vim"
 alias .zshrc="vim ~/.zshrc"
 alias brain="cd ~/second-brain/"
+alias ell="eza --long --tree --level 2 --icons --git --all"
+alias els="eza --tree --level 2 --icons --git"
+alias gitllog="git log --graph --oneline --decorate --all"
+alias gitlog="git --no-pager log --graph --oneline --decorate --all"
+alias grep="grep --color=auto"
+alias lgit="lazygit"
+alias oldnotes="cd ~/Documents/Notes/; vim"
 alias pdfslide="pympress"
+alias pf="fzf --preview='bat --color=always {}' --bind shift-up:preview-page-up,shift-down:preview-page-down"
+alias vim='nvim'
 
 alias tom250="ssh b2320@cs.dsunix.net" # Computer Science 250
 alias tom300="ssh g2431@code.dsunix.net" # Data structures

@@ -55,3 +55,6 @@ vim.keymap.set('n', '<C-f>', ':terminal tmux_sessionizer<CR>i')
 vim.keymap.set("n", "<leader>rl", ":!pdflatex '%:.'<CR>")
 vim.keymap.set("n", "<leader>rb", ":!biber '%:r'<CR>")
 vim.keymap.set("n", "<leader>op", ":!open '%:r'.pdf<CR>")
+
+-- Git
+vim.keymap.set("n", "<leader>ma", ":!gac<CR>")
