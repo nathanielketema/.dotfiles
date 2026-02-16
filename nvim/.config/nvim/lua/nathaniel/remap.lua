@@ -1,17 +1,17 @@
-vim.g.mapleader = " "                     -- <leader>
+vim.g.mapleader = " " -- <leader>
 vim.keymap.set("n", "-", ":Dired<CR>")
 vim.keymap.set("n", "x", '"_x')
 
-vim.keymap.set("n", "<C-u>", "<C-u>zz")            -- Centers the cursor when moving up
-vim.keymap.set("n", "<C-d>", "<C-d>zz")            -- Centers the cursor when moving down
+vim.keymap.set("n", "<C-u>", "<C-u>zz") -- Centers the cursor when moving up
+vim.keymap.set("n", "<C-d>", "<C-d>zz") -- Centers the cursor when moving down
 
-vim.keymap.set("n", "n", "nzzzv")                  -- After searching with /, it centers the cursor, next
-vim.keymap.set("n", "N", "Nzzzv")                  -- After searching with /, it centers the cursor, previous
+vim.keymap.set("n", "n", "nzzzv") -- After searching with /, it centers the cursor, next
+vim.keymap.set("n", "N", "Nzzzv") -- After searching with /, it centers the cursor, previous
 
-vim.keymap.set("n", "<leader>to", ":tabnew<CR>")   -- open new tab
+vim.keymap.set("n", "<leader>to", ":tabnew<CR>") -- open new tab
 vim.keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
-vim.keymap.set("n", "<leader>tn", ":tabn<CR>")     --  go to next tab
-vim.keymap.set("n", "<leader>tp", ":tabp<CR>")     --  go to previous tab
+vim.keymap.set("n", "<leader>tn", ":tabn<CR>") --  go to next tab
+vim.keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
 
 -- Moves the highlighted part. It even indents automatically
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -28,8 +28,8 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- It lets you paste what you yanked intead of what you deleted
-vim.keymap.set("n", "<leader>p", "\"0p") -- Paste it on the bottom
-vim.keymap.set("n", "<leader>P", "\"0P") -- Paste it on top
+vim.keymap.set("n", "<leader>p", '"0p') -- Paste it on the bottom
+vim.keymap.set("n", "<leader>P", '"0P') -- Paste it on top
 
 -- Remaping the Esc key in insert mode
 vim.keymap.set("i", "jk", "<Esc>")
@@ -61,4 +61,4 @@ vim.keymap.set("n", "<leader>rb", ":!biber '%:r'<CR>")
 vim.keymap.set("n", "<leader>op", ":!open '%:r'.pdf<CR>")
 
 -- Git
-vim.keymap.set("n", "<leader>ma", ":!gac<CR>")
+vim.keymap.set("n", "<leader>m", ":!gac<CR>")
