@@ -61,4 +61,4 @@ vim.keymap.set("n", "<leader>rb", ":!biber '%:r'<CR>")
 vim.keymap.set("n", "<leader>op", ":!open '%:r'.pdf<CR>")
 
 -- Git
-vim.keymap.set("n", "<leader>m", ":!gac<CR>")
+vim.keymap.set("n", "<leader>ga", ":!gac<CR>")
