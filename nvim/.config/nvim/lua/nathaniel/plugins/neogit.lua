@@ -15,7 +15,7 @@ return {
 			desc = "Show Neogit UI",
 		},
 		{
-			"<leader>m",
+			"<leader>d",
 			function()
 				require("neogit").open({ kind = "vsplit" })
 			end,
