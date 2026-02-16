@@ -49,7 +49,11 @@ vim.keymap.set("n", "<C-k>", ":cprevious<CR>")
 vim.keymap.set("n", "K", ":vim /<C-R><C-W>/ **<CR>:copen<CR>")
 
 -- Tmux-sessionizer
-vim.keymap.set('n', '<C-f>', ':terminal tmux_sessionizer<CR>i')
+vim.api.nvim_create_autocmd("TermClose", {
+  pattern = "*tmux_sessionizer",
+  command = "bdelete!",
+})
+vim.keymap.set("n", "<C-f>", ":terminal tmux_sessionizer<CR>i", { silent = true })
 
 -- LaTeX
 vim.keymap.set("n", "<leader>rl", ":!pdflatex '%:.'<CR>")
