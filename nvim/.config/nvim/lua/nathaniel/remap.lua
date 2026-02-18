@@ -39,7 +39,6 @@ vim.keymap.set("i", "kj", "<Esc>")
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 
 -- This lets you into terminal mode
-vim.keymap.set("n", "<leader>hter", ":10 split<cr><c-w>j:ter<cr>i")
 vim.keymap.set("n", "<leader>nt", ":vsplit | terminal<CR>i")
 
 -- Shortcut for Quickfix list
