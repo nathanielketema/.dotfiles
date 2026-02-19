@@ -55,6 +55,7 @@ vim.api.nvim_create_autocmd("TermClose", {
 vim.keymap.set("n", "<C-f>", ":terminal tmux_sessionizer<CR>i", { silent = true })
 
 -- LaTeX
+vim.keymap.set("n", "<leader>ro", ":!pdflatex '%:.'<CR>:!open '%:r'.pdf<CR>")
 vim.keymap.set("n", "<leader>rl", ":!pdflatex '%:.'<CR>")
 vim.keymap.set("n", "<leader>rb", ":!biber '%:r'<CR>")
 vim.keymap.set("n", "<leader>op", ":!open '%:r'.pdf<CR>")
