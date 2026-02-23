@@ -47,6 +47,7 @@
             "monofont: \"Courier New\"",
             "header-includes:",
             " - |",
+            "   \\usepackage{float}",
             "   \\usepackage{tcolorbox}",
             "   \\usepackage{etoolbox}",
             "   \\tcbuselibrary{skins,breakable}",
