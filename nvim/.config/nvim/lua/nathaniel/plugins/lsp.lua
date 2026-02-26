@@ -47,6 +47,7 @@ return {
 				texlab = {},
 				yamlls = {},
                 pyrefly = {},
+                svelte = {},
                 ts_ls = {},
 				zls = {
 					settings = {
