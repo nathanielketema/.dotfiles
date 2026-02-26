@@ -26,7 +26,6 @@ sessionizer_jump_widget() {
 bind -x '"\C-f": sessionizer_widget'
 bind -x '"\C-j": sessionizer_jump_widget'
 
-alias lgit='lazygit'
 alias vim='nvim'
 alias gitlog='git --no-pager log --graph --oneline --decorate --all'
 alias gitllog='git log --graph --oneline --decorate --all'
