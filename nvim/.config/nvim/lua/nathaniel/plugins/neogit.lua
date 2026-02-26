@@ -8,16 +8,16 @@ return {
 	cmd = "Neogit",
 	keys = {
 		{
-			"<leader>gg",
+			"<leader>gt",
 			function()
 				require("neogit").open({ kind = "tab" })
 			end,
 			desc = "Show Neogit UI",
 		},
 		{
-			"<leader>gv",
+			"<leader>gs",
 			function()
-				require("neogit").open({ kind = "vsplit" })
+				require("neogit").open({ kind = "auto" })
 			end,
 			desc = "Show Neogit UI",
 		},
