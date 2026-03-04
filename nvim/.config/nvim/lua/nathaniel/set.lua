@@ -49,7 +49,7 @@ vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
   callback = function(args)
     local first_line = vim.fn.getline(1, args.buf)
     if first_line[1]:match("^#!.*bin/env bun") then
-      vim.bo[args.buf].filetype = "javascript"
+      vim.bo[args.buf].filetype = "typescript"
     end
   end,
 })
