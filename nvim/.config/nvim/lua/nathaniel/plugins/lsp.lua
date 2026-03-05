@@ -33,22 +33,22 @@ return {
 				clangd = {},
 				cssls = {},
 				jsonls = {},
-                lua_ls = {
-                    settings = {
-                        Lua = {
-                            diagnostics = { globals = { "vim" } },
-                            workspace = { checkThirdParty = false },
-                        },
-                    },
-                },
+				lua_ls = {
+					settings = {
+						Lua = {
+							diagnostics = { globals = { "vim" } },
+							workspace = { checkThirdParty = false },
+						},
+					},
+				},
 				marksman = {},
 				ruff = {},
 				superhtml = {},
 				texlab = {},
 				yamlls = {},
-                pyrefly = {},
-                svelte = {},
-                ts_ls = {},
+				pyrefly = {},
+				svelte = {},
+				ts_ls = {},
 				zls = {
 					settings = {
 						filetypes = { "zig", "zir", "zon" },
