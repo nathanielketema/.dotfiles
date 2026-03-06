@@ -39,18 +39,16 @@ addToPathFront $HOME/personal/scripts/
 
 alias .nvim="cd $HOME/.config/nvim/; vim"
 alias .zshrc="vim ~/.zshrc"
-alias brain="cd ~/second-brain/"
 alias ell="eza --long --tree --level 2 --icons --git --all"
 alias els="eza --tree --level 2 --icons --git"
 alias gitllog="git log --graph --oneline --decorate --all"
 alias gitlog="git --no-pager log --graph --oneline --decorate --all"
 alias grep="grep --color=auto"
 alias oldnotes="cd ~/Documents/Notes/; vim"
-alias pdfslide="pympress"
 alias pf="fzf --preview='bat --color=always {}' --bind shift-up:preview-page-up,shift-down:preview-page-down"
 alias vim='nvim'
 
-alias tom250="ssh b2320@cs.dsunix.net" # Computer Science 250
+alias tom250="ssh b2320@cs.dsunix.net"   # Computer Science 250
 alias tom300="ssh g2431@code.dsunix.net" # Data structures
 alias tom314="ssh e2436@code.dsunix.net" # Assembly Language
 alias tom310="ssh c2417@code.dsunix.net" # Advanced Data Structures
