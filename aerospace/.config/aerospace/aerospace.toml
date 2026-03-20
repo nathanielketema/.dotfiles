@@ -200,6 +200,14 @@ if.app-id = 'com.mitchellh.ghostty'
 run = "move-node-to-workspace 3"
 
 [[on-window-detected]]
+if.app-id = 'dev.zed.Zed'
+run = "move-node-to-workspace 3"
+
+[[on-window-detected]]
+if.app-id = 'com.cmuxterm.app'
+run = "move-node-to-workspace 3"
+
+[[on-window-detected]]
 if.app-id = 'org.python.python'
 run = "move-node-to-workspace 3"
 
