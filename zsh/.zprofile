@@ -34,7 +34,6 @@ addToPathFront $HOME/.local/bin/
 addToPathFront $HOME/.cargo/bin/
 addToPathFront $HOME/.zvm/bin
 addToPathFront $ZVM_INSTALL
-addToPathFront $HOME/.bun/bin/
 addToPathFront $HOME/personal/scripts/
 
 alias .nvim="cd $HOME/.config/nvim/; vim"
@@ -61,7 +60,7 @@ function s() {
 }
 
 function note() {
-    cd "$HOME/personal/second-brain/notes/inbox/"
+    cd "$HOME/personal/notes/inbox/"
     nvim "$1.md"
 }
 
