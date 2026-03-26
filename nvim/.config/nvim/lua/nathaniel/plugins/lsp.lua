@@ -8,6 +8,7 @@ return {
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
 		opts = {
 			ensure_installed = {
+				"biome",
 				"clang-format",
 				"jq",
 				"prettier",
@@ -30,6 +31,7 @@ return {
 		},
 		opts = {
 			servers = {
+                biome = {},
 				clangd = {},
 				cssls = {},
 				jsonls = {},

@@ -19,10 +19,8 @@ return {
 		formatters_by_ft = {
 			lua = { "stylua" },
 			python = { "ruff_format", "ruff_organize_imports" },
-			javascript = { "prettier" },
-			typescript = { "prettier" },
-			javascriptreact = { "prettier" },
-			typescriptreact = { "prettier" },
+			javascript = { "biome" },
+			typescript = { "biome" },
 			tex = { "tex-fmt" },
 			json = { "jq" },
 			html = { "superhtml" },
@@ -31,18 +29,6 @@ return {
 			sql = { "sqruff" },
 			yml = { "yq" },
 			zig = { "zigfmt" },
-		},
-		formatters = {
-			prettier = function(bufnr)
-				local ft = vim.bo[bufnr].filetype
-				if ft == "javascript" or ft == "typescript" or ft == "javascriptreact" or ft == "typescriptreact" then
-					return {
-						"prettier",
-						prepend_args = { "--tab-width", "4", "--use-tabs", "false" },
-					}
-				end
-				return { "prettier" }
-			end,
 		},
 	},
 }
