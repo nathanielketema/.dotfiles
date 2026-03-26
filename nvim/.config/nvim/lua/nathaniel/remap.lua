@@ -62,3 +62,9 @@ vim.keymap.set("n", "<leader>op", ":!open '%:r'.pdf<CR>")
 
 -- Git
 vim.keymap.set("n", "<leader>ga", ":!gac<CR>")
+
+-- Devdocs
+vim.keymap.set("n", "<leader>di", ":DevdocsInstall<CR>")
+vim.keymap.set("n", "<leader>do", ":DevdocsOpenFloat<CR>")
+vim.keymap.set("n", "<leader>dc", ":DevdocsOpenCurrentFloat<CR>")
+vim.keymap.set("n", "<leader>dt", ":DevdocsToggle<CR>")
