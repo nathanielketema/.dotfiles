@@ -45,6 +45,9 @@ brew "zoxide"
 
 cask "aerospace"
 cask "appcleaner"
+#cask "calibre"
+cask "codex"
+cask "codex-app"
 cask "discord"
 cask "docker-desktop"
 cask "dropzone"
@@ -66,7 +69,3 @@ cask "webull"
 cask "zed"
 cask "zen"
 cask "zoom"
-
-# Uncomment to install
-# - cask "calibre"
-# - cask "cmux"

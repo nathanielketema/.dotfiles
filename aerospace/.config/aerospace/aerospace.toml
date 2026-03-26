@@ -204,7 +204,7 @@ if.app-id = 'dev.zed.Zed'
 run = "move-node-to-workspace 3"
 
 [[on-window-detected]]
-if.app-id = 'com.cmuxterm.app'
+if.app-id = 'com.openai.codex'
 run = "move-node-to-workspace 3"
 
 [[on-window-detected]]
