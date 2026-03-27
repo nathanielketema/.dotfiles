@@ -200,14 +200,6 @@ if.app-id = 'com.mitchellh.ghostty'
 run = "move-node-to-workspace 3"
 
 [[on-window-detected]]
-if.app-id = 'dev.zed.Zed'
-run = "move-node-to-workspace 3"
-
-[[on-window-detected]]
-if.app-id = 'com.openai.codex'
-run = "move-node-to-workspace 3"
-
-[[on-window-detected]]
 if.app-id = 'org.python.python'
 run = "move-node-to-workspace 3"
 
@@ -216,48 +208,44 @@ if.app-id = 'com.apple.iCal'
 run = "move-node-to-workspace 4"
 
 [[on-window-detected]]
-if.app-id = 'us.zoom.xos'
-run = ['layout floating', 'move-node-to-workspace 5']
-
-[[on-window-detected]]
-if.app-id = 'com.apple.FaceTime'
-run = ['layout floating', 'move-node-to-workspace 5']
+if.app-id = 'com.apple.MobileSMS'
+run = "move-node-to-workspace 6"
 
 [[on-window-detected]]
 if.app-id = 'com.apple.AppStore'
 run = ['layout floating', 'move-node-to-workspace 6']
 
 [[on-window-detected]]
-if.app-id = 'com.apple.MobileSMS'
-run = "move-node-to-workspace 6"
+if.app-id = 'us.zoom.xos'
+run = ['layout floating', 'move-node-to-workspace 7']
 
 [[on-window-detected]]
-if.app-id = 'com.microsoft.Word'
-run = "move-node-to-workspace 7"
-
-[[on-window-detected]]
-if.app-id = 'com.microsoft.Excel '
-run = "move-node-to-workspace 7"
+if.app-id = 'com.apple.FaceTime'
+run = ['layout floating', 'move-node-to-workspace 7']
 
 [[on-window-detected]]
 if.app-id = 'com.microsoft.teams2'
 run = "move-node-to-workspace 7"
 
 [[on-window-detected]]
-if.app-id = 'com.microsoft.VSCode'
+if.app-id = 'dev.zed.Zed'
 run = "move-node-to-workspace 8"
 
 [[on-window-detected]]
-if.app-id = 'com.todesktop.230313mzl4w4u92'
+if.app-id = 'com.openai.codex'
 run = "move-node-to-workspace 8"
 
 [[on-window-detected]]
-if.app-id = 'com.trae.app'
-run = "move-node-to-workspace 8"
+if.app-id = 'com.microsoft.Word'
+run = "move-node-to-workspace B"
 
 [[on-window-detected]]
-if.app-id = 'notion.id'
-run = "move-node-to-workspace A"
+if.app-id = 'com.microsoft.Excel'
+run = "move-node-to-workspace B"
+
+[[on-window-detected]]
+if.app-id = 'com.apple.Keynote'
+run = "move-node-to-workspace B"
 
 [[on-window-detected]]
 if.app-id = 'com.utmapp.UTM'
@@ -268,20 +256,16 @@ if.app-id = 'com.vmware.vmrc'
 run = ['layout floating', 'move-node-to-workspace C']
 
 [[on-window-detected]]
-if.app-id = 'com.apple.finder'
-run = ['layout floating', 'move-node-to-workspace F']
-
-[[on-window-detected]]
 if.app-id = 'com.hnc.Discord'
 run = "move-node-to-workspace D"
 
 [[on-window-detected]]
-if.app-id = 'com.apple.Music'
-run = "move-node-to-workspace M"
+if.app-id = 'com.apple.finder'
+run = ['layout floating', 'move-node-to-workspace F']
 
 [[on-window-detected]]
-if.app-id = 'com.apple.Notes'
-run = ['layout floating', 'move-node-to-workspace N']
+if.app-id = 'com.apple.Music'
+run = "move-node-to-workspace M"
 
 [[on-window-detected]]
 if.app-id = 'md.obsidian'
@@ -296,9 +280,9 @@ if.app-id = 'ru.keepcoder.Telegram'
 run = "move-node-to-workspace T"
 
 [[on-window-detected]]
-if.app-id = 'com.apple.finder'
+if.app-id = 'com.apple.TextEdit'
 run = "layout floating"
 
 [[on-window-detected]]
-if.app-id = 'com.apple.TextEdit'
-run = "layout floating"
+if.app-id = 'com.apple.Notes'
+run = 'layout floating'
