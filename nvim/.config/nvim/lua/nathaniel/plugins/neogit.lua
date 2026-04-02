@@ -3,7 +3,9 @@ return {
 	lazy = true,
 	dependencies = {
 		"nvim-lua/plenary.nvim",
-		"sindrets/diffview.nvim",
+		"esmuellert/codediff.nvim",
+		"m00qek/baleia.nvim",
+		"nvim-telescope/telescope.nvim",
 	},
 	cmd = "Neogit",
 	keys = {

@@ -1,72 +1,48 @@
 return {
 	{
-		"williamboman/mason.nvim",
-		cmd = "Mason",
-		opts = {},
-	},
-	{
-		"WhoIsSethDaniel/mason-tool-installer.nvim",
-		opts = {
-			ensure_installed = {
-				"biome",
-				"clang-format",
-				"jq",
-				"prettier",
-				"ruff",
-				"shfmt",
-				"sqruff",
-				"stylua",
-				"superhtml",
-				"tex-fmt",
-				"textlint",
-				"yq",
-			},
+		"mason-org/mason.nvim",
+		dependencies = {
+			"mason-org/mason-lspconfig.nvim",
+			"WhoIsSethDaniel/mason-tool-installer.nvim",
 		},
+		config = function()
+			require("mason").setup()
+			require("mason-lspconfig").setup()
+			require("mason-tool-installer").setup({
+				ensure_installed = {
+					"biome",
+					"clang-format",
+					"jq",
+					"ruff",
+					"stylua",
+					"superhtml",
+					"tex-fmt",
+					"textlint",
+					"ts_ls",
+					"yq",
+					"zls",
+				},
+			})
+		end,
 	},
 	{
 		"neovim/nvim-lspconfig",
 		dependencies = {
-			"williamboman/mason-lspconfig.nvim",
-			"saghen/blink.cmp",
+			"mason-org/mason.nvim",
+			"mason-org/mason-lspconfig.nvim",
 		},
-		opts = {
-			servers = {
-                biome = {},
-				clangd = {},
-				cssls = {},
-				jsonls = {},
-				lua_ls = {
-					settings = {
-						Lua = {
-							diagnostics = { globals = { "vim" } },
-							workspace = { checkThirdParty = false },
-						},
-					},
-				},
-				marksman = {},
-				ruff = {},
-				superhtml = {},
-				texlab = {},
-				yamlls = {},
-				pyrefly = {},
-				svelte = {},
-				ts_ls = {},
-				zls = {
-					settings = {
-						filetypes = { "zig", "zir", "zon" },
-					},
-				},
-			},
-		},
-		config = function(_, opts)
-			local capabilities = require("blink.cmp").get_lsp_capabilities()
-
-			for server_name, server_opts in pairs(opts.servers) do
-				server_opts.capabilities = vim.tbl_deep_extend("force", capabilities, server_opts.capabilities or {})
-
-				vim.lsp.config(server_name, server_opts)
-				vim.lsp.enable(server_name)
-			end
+		config = function()
+			vim.api.nvim_create_autocmd("LspAttach", {
+				group = vim.api.nvim_create_augroup("UserLspConfig", {}),
+				callback = function(ev)
+					local map_opts = { buffer = ev.buf }
+					vim.keymap.set("n", "gd", vim.lsp.buf.definition, map_opts)
+					vim.keymap.set("n", ",.", function()
+						vim.cmd.vsplit()
+						vim.lsp.buf.definition()
+					end, map_opts)
+				end,
+			})
 
 			vim.diagnostic.config({
 				virtual_text = { spacing = 2 },
@@ -76,34 +52,17 @@ return {
 				severity_sort = true,
 			})
 
-			vim.api.nvim_create_autocmd("LspAttach", {
-				group = vim.api.nvim_create_augroup("UserLspConfig", {}),
-				callback = function(ev)
-					local map_opts = { buffer = ev.buf }
-
-					vim.keymap.set("n", "gd", vim.lsp.buf.definition, map_opts)
-					vim.keymap.set("n", ",.", function()
-						vim.cmd.vsplit()
-						vim.lsp.buf.definition()
-					end, map_opts)
-					vim.keymap.set("n", "K", vim.lsp.buf.hover, map_opts)
-					vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, map_opts)
-					vim.keymap.set("n", "<leader>rr", vim.lsp.buf.references, map_opts)
-					vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, map_opts)
-					vim.keymap.set("i", "<C-h>", vim.lsp.buf.signature_help, map_opts)
-				end,
+			vim.lsp.config("lua_ls", {
+				settings = {
+					Lua = {
+						runtime = { version = "LuaJIT" },
+						diagnostics = { globals = { "vim", "require" } },
+						workspace = {
+							library = vim.api.nvim_get_runtime_file("", true),
+						},
+					},
+				},
 			})
-
-			vim.keymap.set("n", "<leader>vd", vim.diagnostic.open_float)
-			vim.keymap.set("n", "[d", vim.diagnostic.goto_next)
-			vim.keymap.set("n", "]d", vim.diagnostic.goto_prev)
-
-			vim.keymap.set("n", "<leader>vc", function()
-				vim.diagnostic.enable(false)
-			end, { desc = "Hide Diagnostics" })
-			vim.keymap.set("n", "<leader>vs", function()
-				vim.diagnostic.enable(true)
-			end, { desc = "Show Diagnostics" })
 		end,
 	},
 }
