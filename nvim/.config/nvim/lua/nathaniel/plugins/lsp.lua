@@ -11,16 +11,25 @@ return {
 			require("mason-tool-installer").setup({
 				ensure_installed = {
 					"biome",
-					"clang-format",
+					"codelldb",
 					"jq",
+					"lua_ls",
+					"marksman",
+					"prettier",
+					"pyrefly",
 					"ruff",
 					"stylua",
 					"superhtml",
+					"svelte-language-server",
 					"tex-fmt",
 					"textlint",
 					"ts_ls",
-					"yq",
+					"unocss-language-server",
 					"zls",
+                    "clang-format",
+                    "clangd",
+                    "texlab",
+                    "ty",
 				},
 			})
 		end,
@@ -32,18 +41,6 @@ return {
 			"mason-org/mason-lspconfig.nvim",
 		},
 		config = function()
-			vim.api.nvim_create_autocmd("LspAttach", {
-				group = vim.api.nvim_create_augroup("UserLspConfig", {}),
-				callback = function(ev)
-					local map_opts = { buffer = ev.buf }
-					vim.keymap.set("n", "gd", vim.lsp.buf.definition, map_opts)
-					vim.keymap.set("n", ",.", function()
-						vim.cmd.vsplit()
-						vim.lsp.buf.definition()
-					end, map_opts)
-				end,
-			})
-
 			vim.diagnostic.config({
 				virtual_text = { spacing = 2 },
 				signs = false,
@@ -63,6 +60,20 @@ return {
 					},
 				},
 			})
+
+			vim.lsp.config("unocss", {
+				filetypes = {
+					"markdown",
+				},
+				root_markers = { "slides.md" },
+			})
+
+			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code Actions" })
+			vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Goto Definition" })
+			vim.keymap.set("n", ",.", function()
+				vim.cmd.vsplit()
+				vim.lsp.buf.definition()
+			end, {})
 		end,
 	},
 }
