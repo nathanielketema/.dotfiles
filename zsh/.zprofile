@@ -2,7 +2,7 @@
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zprofile.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zprofile.pre.zsh"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-eval "$(zoxide init zsh)"
+eval "$(zoxide init --cmd cd zsh)"
 
 export XDG_CONFIG_HOME=$HOME/.config
 export EDITOR="/opt/homebrew/bin/nvim"
