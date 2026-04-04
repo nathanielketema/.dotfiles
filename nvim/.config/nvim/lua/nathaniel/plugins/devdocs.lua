@@ -1,12 +1,19 @@
 return {
 	"luckasRanarison/nvim-devdocs",
-    lazy = true,
+	cmd = {
+		"DevdocsOpen",
+		"DevdocsOpenCurrent",
+		"DevdocsOpenCurrentFloat",
+		"DevdocsUpdate",
+		"DevdocsUpdateAll",
+		"DevdocsInstall",
+		"DevdocsUninstall",
+	},
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"nvim-telescope/telescope.nvim",
-		"nvim-treesitter/nvim-treesitter",
 	},
 	opts = {
-        wrap = true,
-    },
+		wrap = true,
+	},
 }
