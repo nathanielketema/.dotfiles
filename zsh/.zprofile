@@ -2,39 +2,38 @@
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zprofile.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zprofile.pre.zsh"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-VIM="nvim"
+eval "$(zoxide init zsh)"
 
 export XDG_CONFIG_HOME=$HOME/.config
-
 export EDITOR="/opt/homebrew/bin/nvim"
 export C_INCLUDE_PATH="/usr/local/include"
 export VISUAL="/opt/homebrew/bin/nvim"
-export GIT_EDITOR="$VIM"
+export GIT_EDITOR="nvim"
 export DOTFILES="$HOME/.dotfiles/"
 export HOMEBREW_NO_ENV_HINTS=1
-
 export ZVM_INSTALL="$HOME/.zvm/self"
 
-addToPath() {
+function addToPath() {
     if [[ "$PATH" != *"$1"* ]]; then
         export PATH=$PATH:$1
     fi
 }
 
-addToPathFront() {
+function addToPathFront() {
     if [[ "$PATH" != *"$1"* ]]; then
         export PATH=$1:$PATH
     fi
 }
 
-addToPathFront $HOME/.zig/
+addToPathFront /opt/homebrew/opt/curl/bin
 addToPathFront /opt/homebrew/opt/postgresql@16/bin
-addToPathFront $HOME/.outfieldr/zig-out/bin/ # zldr
+addToPathFront $HOME/.zig/
+addToPathFront $HOME/.outfieldr/zig-out/bin/              # zldr
 addToPathFront $HOME/.local/bin/
 addToPathFront $HOME/.cargo/bin/
 addToPathFront $HOME/.zvm/bin
-addToPathFront $ZVM_INSTALL
 addToPathFront $HOME/personal/scripts/
+addToPathFront $ZVM_INSTALL
 
 alias .nvim="cd $HOME/.config/nvim/; vim"
 alias .zshrc="vim ~/.zshrc"
@@ -85,6 +84,15 @@ function sessionizer_jump_widget() {
 }
 zle -N sessionizer_jump_widget
 bindkey '^J' sessionizer_jump_widget
+
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
 
 # Q post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zprofile.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zprofile.post.zsh"
