@@ -10,7 +10,12 @@ return {
 			org_agenda_skip_scheduled_if_done = true,
 			org_agenda_skip_deadline_if_done = true,
 			org_deadline_warning_days = 0,
+			org_todo_keywords = { "TODO", "IN_PROGRESS", "|", "DONE" },
+			org_todo_keyword_faces = {
+				IN_PROGRESS = ":foreground yellow :weight bold",
+			},
 		})
+
 		-- Experimental LSP support
 		vim.lsp.enable("org")
 	end,
