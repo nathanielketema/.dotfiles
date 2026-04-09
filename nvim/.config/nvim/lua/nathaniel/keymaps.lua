@@ -37,8 +37,8 @@ vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 
 -- Shortcut for Quickfix list
 vim.keymap.set("n", "<leader>co", ":copen<CR>")
-vim.keymap.set("n", "<leader>cn", ":cnext<CR>")
-vim.keymap.set("n", "<leader>cp", ":cprevious<CR>")
+vim.keymap.set("n", "<C-n>", ":cnext<CR>")
+vim.keymap.set("n", "<C-p>", ":cprevious<CR>")
 
 -- Tmux-sessionizer
 vim.api.nvim_create_autocmd("TermClose", {

@@ -14,6 +14,7 @@ return {
 			org_todo_keyword_faces = {
 				IN_PROGRESS = ":foreground yellow :weight bold",
 			},
+			org_startup_indented = true,
 		})
 
 		-- Experimental LSP support
