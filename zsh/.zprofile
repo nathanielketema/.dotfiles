@@ -27,7 +27,6 @@ function addToPathFront() {
 
 addToPathFront /opt/homebrew/opt/curl/bin
 addToPathFront /opt/homebrew/opt/postgresql@16/bin
-addToPathFront $HOME/.zig/
 addToPathFront $HOME/.outfieldr/zig-out/bin/              # zldr
 addToPathFront $HOME/.local/bin/
 addToPathFront $HOME/.cargo/bin/
@@ -35,14 +34,11 @@ addToPathFront $HOME/.zvm/bin
 addToPathFront $HOME/personal/scripts/
 addToPathFront $ZVM_INSTALL
 
-alias .nvim="cd $HOME/.config/nvim/; vim"
-alias .zshrc="vim ~/.zshrc"
 alias ell="eza --long --tree --level 2 --icons --git --all"
 alias els="eza --tree --level 2 --icons --git"
 alias gitllog="git log --graph --oneline --decorate --all"
 alias gitlog="git --no-pager log --graph --oneline --decorate --all"
 alias grep="grep --color=auto"
-alias oldnotes="cd ~/Documents/Notes/; vim"
 alias pf="fzf --preview='bat --color=always {}' --bind shift-up:preview-page-up,shift-down:preview-page-down"
 alias vim='nvim'
 
