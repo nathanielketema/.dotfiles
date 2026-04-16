@@ -3,16 +3,14 @@
         "prefix": "zinit",
         "body": [
             "const std = @import(\"std\");",
-            "const Io = std.Io;",
-            "const Allocator = std.mem.Allocator;",
             "const assert = std.debug.assert;",
             "const testing = std.testing;",
             "",
-            "pub fn main() !void {",
-            "    $0",
-            "}",
+            "const Io = std.Io;",
+            "const Allocator = std.mem.Allocator;",
             "",
-            "test \"foo\" {",
+            "pub fn main(init: std.process.Init) !void {",
+            "    $0",
             "}"
         ]
     },
