@@ -1,4 +1,5 @@
 theme = "TokyoNight Night"
+font-family = "Iosevka"
 font-size = 14
 font-feature = -liga
 shell-integration-features = "no-cursor, title"
