@@ -25,11 +25,10 @@ return {
 					"textlint",
 					"ts_ls",
 					"unocss-language-server",
-					"zls",
-                    "clang-format",
-                    "clangd",
-                    "texlab",
-                    "ty",
+					"clang-format",
+					"clangd",
+					"texlab",
+					"ty",
 				},
 			})
 		end,
@@ -48,6 +47,8 @@ return {
 				update_in_insert = false,
 				severity_sort = true,
 			})
+
+			vim.lsp.enable("zls")
 
 			vim.lsp.config("lua_ls", {
 				settings = {
