@@ -12,7 +12,7 @@ return {
             vim.wo.wrap = false
             vim.wo.number = true
             vim.wo.rnu = true
-        end)
+        end, { desc = "Zen mode wide" })
 
 
         vim.keymap.set("n", "<leader>zZ", function()
@@ -27,6 +27,6 @@ return {
             vim.wo.number = false
             vim.wo.rnu = false
             vim.opt.colorcolumn = "0"
-        end)
+        end, { desc = "Zen mode narrow" })
     end
 }
