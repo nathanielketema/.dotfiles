@@ -30,7 +30,6 @@ return {
 					"ty",
 					"unocss-language-server",
                     "yq",
-                    "zigfmt",
 				},
 			})
 		end,
