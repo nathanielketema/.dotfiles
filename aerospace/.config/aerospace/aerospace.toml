@@ -119,24 +119,24 @@ alt-minus = 'resize smart -50'
 alt-equal = 'resize smart +50'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
-ctrl-1 = 'workspace 1' # zen
+ctrl-1 = 'workspace 1' # calendar
 ctrl-2 = 'workspace 2' # mail
 ctrl-3 = 'workspace 3' # terminal
-ctrl-4 = 'workspace 4' # calendar
+ctrl-4 = 'workspace 4' # zen
 ctrl-5 = 'workspace 5' # zoom
-ctrl-6 = 'workspace 6' # settings/appstore/floating
+ctrl-6 = 'workspace 6' # messages
 alt-a = 'workspace A' # free
 alt-b = 'workspace B' # free
 alt-c = 'workspace C' # vm
 alt-d = 'workspace D' # discord
 alt-f = 'workspace F' # finder
 ctrl-7 = 'workspace 7' # microsoft
-ctrl-8 = 'workspace 8' # cursor/trae/vscode
+ctrl-8 = 'workspace 8'
 ctrl-9 = 'workspace 9' # safari
 alt-m = 'workspace M' # music
 alt-n = 'workspace N' # notes
 alt-p = 'workspace P' # preview
-alt-t = 'workspace T' # text -> telegram/messages
+alt-t = 'workspace T'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 alt-shift-1 = 'move-node-to-workspace 1'
@@ -188,7 +188,7 @@ up = 'volume up'
 shift-down = ['volume set 0', 'mode main']
 
 [[on-window-detected]]
-if.app-id = 'app.zen-browser.zen'
+if.app-id = 'com.apple.iCal'
 run = "move-node-to-workspace 1"
 
 [[on-window-detected]]
@@ -204,8 +204,9 @@ if.app-id = 'org.python.python'
 run = "move-node-to-workspace 3"
 
 [[on-window-detected]]
-if.app-id = 'com.apple.iCal'
+if.app-id = 'app.zen-browser.zen'
 run = "move-node-to-workspace 4"
+
 
 [[on-window-detected]]
 if.app-id = 'com.apple.MobileSMS'
