@@ -34,6 +34,7 @@ addToPathFront $HOME/.zvm/bin
 addToPathFront $HOME/personal/scripts/
 addToPathFront $ZVM_INSTALL
 
+alias "?"="opencode run"
 alias ell="eza --long --tree --level 2 --icons --git --all"
 alias els="eza --tree --level 2 --icons --git"
 alias gitllog="git log --graph --oneline --decorate --all"
