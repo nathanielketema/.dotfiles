@@ -71,8 +71,6 @@ return {
 			})
 
 			vim.keymap.set("n", "<leader>vd", vim.diagnostic.open_float, { desc = "Line diagnostics" })
-			vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Next diagnostic" })
-			vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Previous diagnostic" })
 			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code Actions" })
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Goto Definition" })
 			vim.keymap.set("n", ",.", function()
