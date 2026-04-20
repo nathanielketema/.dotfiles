@@ -1,14 +1,18 @@
 return {
-    "theprimeagen/harpoon",
+    "ThePrimeagen/harpoon",
+    branch = "harpoon2",
+    dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
-        local mark = require("harpoon.mark")
-        local ui = require("harpoon.ui")
+        local harpoon = require("harpoon")
 
-        vim.keymap.set("n", "<leader>ha", mark.add_file)
-        vim.keymap.set("n", "<leader>he", ui.toggle_quick_menu)
-        vim.keymap.set("n", "<leader>hf", function() ui.nav_file(1) end)
-        vim.keymap.set("n", "<leader>hs", function() ui.nav_file(2) end)
-        vim.keymap.set("n", "<leader>ht", function() ui.nav_file(3) end)
-        vim.keymap.set("n", "<leader>hl", function() ui.nav_file(4) end)
+        harpoon:setup()
+
+        vim.keymap.set("n", "<leader>ha", function() harpoon:list():add() end)
+        vim.keymap.set("n", "<leader>he", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
+        vim.keymap.set("n", "<leader>h1", function() harpoon:list():select(1) end)
+        vim.keymap.set("n", "<leader>h2", function() harpoon:list():select(2) end)
+        vim.keymap.set("n", "<leader>h3", function() harpoon:list():select(3) end)
+        vim.keymap.set("n", "<leader>hs", function() harpoon:list():prev() end)
+        vim.keymap.set("n", "<leader>hl", function() harpoon:list():next() end)
     end
 }
