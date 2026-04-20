@@ -11,6 +11,8 @@ return {
 			require("mason-tool-installer").setup({
 				ensure_installed = {
 					"biome",
+					"clang-format",
+					"clangd",
 					"codelldb",
 					"jq",
 					"lua_ls",
@@ -22,13 +24,13 @@ return {
 					"superhtml",
 					"svelte-language-server",
 					"tex-fmt",
+					"texlab",
 					"textlint",
 					"ts_ls",
-					"unocss-language-server",
-					"clang-format",
-					"clangd",
-					"texlab",
 					"ty",
+					"unocss-language-server",
+                    "yq",
+                    "zigfmt",
 				},
 			})
 		end,

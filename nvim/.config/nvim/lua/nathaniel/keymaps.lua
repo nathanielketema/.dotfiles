@@ -8,7 +8,7 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz") -- Centers the cursor when moving down
 vim.keymap.set("n", "n", "nzzzv") -- After searching with /, it centers the cursor, next
 vim.keymap.set("n", "N", "Nzzzv") -- After searching with /, it centers the cursor, previous
 
-vim.keymap.set("n", "<leader>tt", ":tabnew<CR>") -- open new tab
+vim.keymap.set("n", "<leader>to", ":tabnew<CR>") -- open new tab
 vim.keymap.set("n", "<leader>tw", ":tabclose<CR>") -- close current tab
 vim.keymap.set("n", "<leader>tn", ":tabn<CR>") --  go to next tab
 vim.keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
@@ -16,10 +16,6 @@ vim.keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
 -- Moves the highlighted part. It even indents automatically
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
-
--- This one lets you yank into the system clipboard
-vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
-vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 -- It lets you edit the word you're on
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
