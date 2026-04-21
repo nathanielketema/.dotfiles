@@ -33,6 +33,7 @@ vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 
 -- Shortcut for Quickfix list
 vim.keymap.set("n", "<leader>co", ":copen<CR>")
+vim.keymap.set("n", "<leader>cc", ":cclose<CR>")
 vim.keymap.set("n", "<C-n>", ":cnext<CR>")
 vim.keymap.set("n", "<C-p>", ":cprevious<CR>")
 
