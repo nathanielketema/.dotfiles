@@ -36,6 +36,7 @@ addToPathFront $ZVM_INSTALL
 
 alias "?"="opencode run --model openai/gpt-5.4-mini-fast"
 alias oc="opencode"
+alias sk="sioyek"
 alias ell="eza --long --tree --level 2 --icons --git --all"
 alias els="eza --tree --level 2 --icons --git"
 alias gitllog="git log --graph --oneline --decorate --all"

@@ -24,7 +24,7 @@ return {
 			tex = { "tex-fmt" },
 			json = { "jq" },
 			html = { "superhtml" },
-			markdown = { "prettier" },
+			markdown = { "mdformat" },
 			sh = { "shfmt" },
 			sql = { "sqruff" },
 			yml = { "yq" },

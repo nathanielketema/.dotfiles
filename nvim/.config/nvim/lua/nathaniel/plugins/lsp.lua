@@ -17,7 +17,7 @@ return {
 					"jq",
 					"lua_ls",
 					"marksman",
-					"prettier",
+					"mdformat",
 					"pyrefly",
 					"ruff",
 					"stylua",
