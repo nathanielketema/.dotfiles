@@ -30,5 +30,10 @@ return {
 			yml = { "yq" },
 			zig = { "zigfmt" },
 		},
+		formatters = {
+			mdformat = {
+				prepend_args = { "--number" },
+			},
+		},
 	},
 }
