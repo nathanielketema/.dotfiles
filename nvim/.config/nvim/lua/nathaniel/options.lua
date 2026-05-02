@@ -36,10 +36,13 @@ vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
     local first_line = vim.fn.getline(1, args.buf)
     if first_line[1]:match("^#!.*bin/env bun") then
       vim.bo[args.buf].filetype = "typescript"
+    elseif first_line[1]:match("^.*/bin/env zig.*") then
+      vim.bo[args.buf].filetype = "zig"
     end
   end,
 })
 
+-- Recognize Brewfile
 vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
   pattern = "Brewfile",
   callback = function(args)

@@ -50,6 +50,9 @@ vim.keymap.set("n", "<leader>rl", ":!pdflatex '%:.'<CR>")
 vim.keymap.set("n", "<leader>rb", ":!biber '%:r'<CR>")
 vim.keymap.set("n", "<leader>op", ":!open '%:r'.pdf<CR>")
 
+-- Sioyek
+vim.keymap.set("n", "<C-s>", ":!open_sioyek '%:r'.pdf<CR>")
+
 -- Git
 vim.keymap.set("n", "<leader>ga", ":!gac<CR>", { desc = "Git add and commit" })
 
