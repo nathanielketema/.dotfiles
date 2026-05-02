@@ -7,7 +7,11 @@ return {
 		},
 		config = function()
 			require("mason").setup()
-			require("mason-lspconfig").setup()
+			require("mason-lspconfig").setup({
+				automatic_enable = {
+					exclude = { "rumdl" },
+				},
+			})
 			require("mason-tool-installer").setup({
 				ensure_installed = {
 					"biome",
@@ -17,9 +21,9 @@ return {
 					"jq",
 					"lua_ls",
 					"marksman",
-					"mdformat",
 					"pyrefly",
 					"ruff",
+					"rumdl",
 					"stylua",
 					"superhtml",
 					"svelte-language-server",
@@ -29,7 +33,9 @@ return {
 					"ts_ls",
 					"ty",
 					"unocss-language-server",
-                    "yq",
+					"shfmt",
+					"sqruff",
+					"yq",
 				},
 			})
 		end,
