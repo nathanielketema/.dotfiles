@@ -56,6 +56,8 @@ return {
 					"MD013.reflow=true",
 					"--config",
 					'MD049.style="underscore"',
+					"--config",
+					'MD050.style="underscore"',
 				},
 			},
 		},

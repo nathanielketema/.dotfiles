@@ -21,5 +21,37 @@
     "zprint": {
         "prefix": "zprint",
         "body": "std.debug.print(\"$1\\n\", .{$0});"
+    },
+    "zeetcode": {
+        "prefix": "zeetcode",
+        "body": [
+            "const std = @import(\"std\");",
+            "const assert = std.debug.assert;",
+            "const testing = std.testing;",
+            "const Io = std.Io;",
+            "const Allocator = std.mem.Allocator;",
+            "",
+            "const Solution = struct {",
+            "   fn $0foo(arena: Allocator) !void {",
+            "   }",
+            "};",
+            "",
+            "test \"solution\" {",
+            "   const T = struct {",
+            "       fn check(want: bool) !void {",
+            "           var arena_instance: std.heap.ArenaAllocator = .init(testing.allocator);",
+            "           defer arena_instance.deinit();",
+            "           const arena = arena_instance.allocator();",
+
+            "           const got = try Solution.foo(arena);",
+            "           // print",
+            "           try testing.expectEqual(want, got);",
+            "       }",
+            "   };",
+            "",
+            "   try T.check(true);",
+            "}"
+        ]
     }
 }
+
