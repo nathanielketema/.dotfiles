@@ -31,6 +31,13 @@ vim.keymap.set("i", "kj", "<Esc>")
 -- This lets you go to normal mode in the neovim terminal
 vim.keymap.set("t", "jk", "<C-\\><C-n>")
 vim.keymap.set("t", "kj", "<C-\\><C-n>")
+vim.keymap.set("t", "<C-w>h", "<C-\\><C-n><C-w>h")
+vim.keymap.set("t", "<C-w>l", "<C-\\><C-n><C-w>l")
+vim.keymap.set("t", "<C-w>j", "<C-\\><C-n><C-w>j")
+vim.keymap.set("t", "<C-w>k", "<C-\\><C-n><C-w>k")
+
+vim.keymap.set("n", ",v", ":vertical terminal<CR>isource ~/.zprofile<CR>")
+vim.keymap.set("n", ",s", ":horizontal terminal<CR>isource ~/.zprofile<CR>")
 
 -- Shortcut for Quickfix list
 vim.keymap.set("n", "<leader>co", ":copen<CR>")
