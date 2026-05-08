@@ -37,6 +37,8 @@ return {
 					"--config",
 					"MD060.enabled=true",
 					"--config",
+					'MD060.style="aligned"',
+					"--config",
 					"MD063.enabled=true",
 					"--config",
 					'MD063.style="sentence-case"',
