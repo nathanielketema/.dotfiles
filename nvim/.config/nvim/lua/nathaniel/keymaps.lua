@@ -36,8 +36,8 @@ vim.keymap.set("t", "<C-w>l", "<C-\\><C-n><C-w>l")
 vim.keymap.set("t", "<C-w>j", "<C-\\><C-n><C-w>j")
 vim.keymap.set("t", "<C-w>k", "<C-\\><C-n><C-w>k")
 
-vim.keymap.set("n", ",v", ":vertical terminal<CR>isource ~/.zprofile<CR>")
-vim.keymap.set("n", ",s", ":horizontal terminal<CR>isource ~/.zprofile<CR>")
+vim.keymap.set("n", ",v", ":vertical terminal<CR>i")
+vim.keymap.set("n", ",s", ":horizontal terminal<CR>i")
 
 -- Shortcut for Quickfix list
 vim.keymap.set("n", "<leader>co", ":copen<CR>")
