@@ -1,51 +1,32 @@
-vim.opt.guicursor = ""
+local set = vim.opt
 
-vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.expandtab = true
-vim.opt.hlsearch = false
-vim.opt.incsearch = true
-vim.opt.smartindent = true
-vim.opt.wrap = true
-vim.opt.splitright = true
-vim.opt.splitbelow = true
-vim.opt.swapfile = false
-vim.opt.backup = false
-vim.opt.undofile = true
-vim.opt.termguicolors = true
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
+set.guicursor = ""
 
-vim.opt.textwidth = 95
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.scrolloff = 8
-vim.opt.updatetime = 50
+set.number = true
+set.relativenumber = true
+set.expandtab = true
+set.hlsearch = false
+set.incsearch = true
+set.smartindent = true
+set.wrap = true
+set.splitright = true
+set.splitbelow = true
+set.swapfile = false
+set.backup = false
+set.undofile = true
+set.termguicolors = true
+set.ignorecase = true
+set.smartcase = true
 
-vim.opt.colorcolumn = "100"
-vim.opt.signcolumn = "yes"
+set.textwidth = 95
+set.tabstop = 4
+set.softtabstop = 4
+set.shiftwidth = 4
+set.scrolloff = 8
+set.updatetime = 50
 
-vim.opt.clipboard:append("unnamedplus")
-vim.opt.isfname:append("@-@")
+set.colorcolumn = "100"
+set.signcolumn = "yes"
 
--- Recognize #!/usr/bin/env bun
-vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
-  pattern = "*",
-  callback = function(args)
-    local first_line = vim.fn.getline(1, args.buf)
-    if first_line[1]:match("^#!.*bin/env bun") then
-      vim.bo[args.buf].filetype = "typescript"
-    elseif first_line[1]:match("^.*/bin/env zig.*") then
-      vim.bo[args.buf].filetype = "zig"
-    end
-  end,
-})
-
--- Recognize Brewfile
-vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
-  pattern = "Brewfile",
-  callback = function(args)
-    vim.bo[args.buf].filetype = "ruby"
-  end,
-})
+set.clipboard:append("unnamedplus")
+set.isfname:append("@-@")
