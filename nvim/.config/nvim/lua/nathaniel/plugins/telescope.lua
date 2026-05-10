@@ -15,22 +15,24 @@ return {
 			extensions = {
 				fzf = {},
 			},
+			pickers = {
+				find_files = { theme = "ivy" },
+                git_files = { theme = "ivy" },
+                live_grep = { theme = "ivy" },
+                buffers = { theme = "ivy" },
+                help_tags = { theme = "ivy" },
+                current_buffer_fuzzy_find = { theme = "ivy" },
+			},
 		})
 		telescope.load_extension("fzf")
 
 		local set = vim.keymap.set
-        set("n", "<leader><leader>", ":Telescope<CR>")
+		set("n", "<leader><leader>", ":Telescope<CR>")
 		set("n", "<leader>ff", builtin.find_files)
 		set("n", "<leader>fg", builtin.git_files)
 		set("n", "<leader>fs", builtin.live_grep)
 		set("n", "<leader>fb", builtin.buffers)
 		set("n", "<leader>fh", builtin.help_tags)
-		set("n", "<leader>fo", builtin.oldfiles)
 		set("n", "<leader>fc", builtin.current_buffer_fuzzy_find)
-		set("n", "<leader>fw", builtin.grep_string)
-		set("n", "<leader>fd", builtin.diagnostics)
-		set("n", "<leader>fr", builtin.resume)
-		set("n", "<leader>fR", builtin.lsp_references)
-		set("n", "<leader>fD", builtin.lsp_definitions)
 	end,
 }
