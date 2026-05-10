@@ -17,15 +17,13 @@ vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
 	end,
 })
 
--- <TODO>
 -- Easy testing for neetcode zig files
-vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
 	pattern = "*.zig",
 	callback = function()
-		local filepath = vim.fn.expand("%:p")
-		local neetcode_dir = vim.fn.expand("$HOME") .. "/personal/neetcode"
-		if vim.startswith(filepath, neetcode_dir) then
-			vim.keymap.set("n", ",r", ":vertical terminal<CR>izig test %<CR>", { buffer = true, desc = "Run zig test" })
+		local file_path = vim.api.nvim_buf_get_name(0)
+		if string.find(file_path, "neetcode") then
+			vim.keymap.set("n", ",r", ":vertical terminal zig test %<CR>", { buffer = true })
 		end
 	end,
 })
