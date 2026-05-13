@@ -69,11 +69,11 @@ function y() {
 
 addToPathFront /opt/homebrew/opt/curl/bin
 addToPathFront /opt/homebrew/opt/postgresql@16/bin
-addToPathFront $HOME/.outfieldr/zig-out/bin/              # zldr
-addToPathFront $HOME/.local/bin/
-addToPathFront $HOME/.cargo/bin/
+addToPathFront $HOME/.outfieldr/zig-out/bin              # zldr
+addToPathFront $HOME/.local/bin
+addToPathFront $HOME/.cargo/bin
 addToPathFront $HOME/.zvm/bin
-addToPathFront $HOME/personal/scripts/
+addToPathFront $HOME/personal/scripts
 addToPathFront $ZVM_INSTALL
 
 alias "?"="opencode run --model openai/gpt-5.4-mini-fast"
