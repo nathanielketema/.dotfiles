@@ -55,7 +55,7 @@ set("n", "<leader>rb", ":!biber '%:r'<CR>")
 set("n", "<leader>op", ":!open '%:r'.pdf<CR>")
 
 -- Sioyek
-set("n", "<C-s>", ":!open_sioyek '%:r'.pdf<CR>")
+set("n", "<C-s>", ":!tmux_sioyek %<CR>")
 
 -- Git
 set("n", "<leader>ga", ":!gac<CR>", { desc = "Git add and commit" })
