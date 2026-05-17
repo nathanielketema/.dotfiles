@@ -18,6 +18,10 @@
         "prefix": "zlog",
         "body": "@compileLog(@TypeOf($0));"
     },
+    "ztodo": {
+        "prefix": "ztodo",
+        "body": "@panic(\"TODO\");"
+    },
     "zprint": {
         "prefix": "zprint",
         "body": "std.debug.print(\"$1\\n\", .{$0});"
