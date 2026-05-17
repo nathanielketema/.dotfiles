@@ -129,6 +129,7 @@ alt-a = 'workspace A' # free
 alt-b = 'workspace B' # free
 alt-c = 'workspace C' # vm
 alt-d = 'workspace D' # discord
+alt-w = 'workspace W' # journal
 alt-f = 'workspace F' # finder
 ctrl-7 = 'workspace 7' # microsoft
 ctrl-8 = 'workspace 8'
@@ -263,6 +264,10 @@ run = "move-node-to-workspace D"
 [[on-window-detected]]
 if.app-id = 'com.apple.finder'
 run = ['layout floating', 'move-node-to-workspace F']
+
+[[on-window-detected]]
+if.app-id = 'com.apple.journal'
+run = "move-node-to-workspace W"
 
 [[on-window-detected]]
 if.app-id = 'com.apple.Music'

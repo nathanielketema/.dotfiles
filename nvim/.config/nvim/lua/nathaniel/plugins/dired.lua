@@ -9,6 +9,7 @@ return {
 			show_hidden = true,
 			show_dot_dirs = true,
 			show_colors = true,
+			override_cwd = false,
 		})
 	end,
 }
