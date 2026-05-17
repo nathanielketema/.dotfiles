@@ -1,10 +1,11 @@
+set --global --export XDG_CONFIG_HOME $HOME/.config
 set --global --export EDITOR nvim
 set --global --export VISUAL $EDITOR
 set --global --export GIT_EDITOR nvim
-set --global --export DOTFILES $HOME/.dotfiles/
+set --global --export DOTFILES $HOME/.dotfiles
 set --global --export HOMEBREW_NO_ENV_HINTS 1
 set --global --export C_INCLUDE_PATH /usr/local/include
-set --global --export FZF_CTRL_T_COMMAND 'fd --type f'
+set --global --export FZF_CTRL_T_COMMAND "fd --type f"
 
 # Remove greeting
 set --global fish_greeting
