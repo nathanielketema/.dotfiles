@@ -14,7 +14,7 @@ fish_add_path $HOME/.zvm/self
 fish_add_path $HOME/.zvm/bin
 fish_add_path $HOME/.cargo/bin
 fish_add_path $HOME/.local/bin
-fish_add_path $HOME/.outfieldr/zig-out/bin   # zldr
+fish_add_path $HOME/.outfieldr/zig-out/bin # zldr
 fish_add_path /opt/homebrew/opt/postgresql@16/bin
 fish_add_path /opt/homebrew/opt/curl/bin
 
@@ -24,12 +24,12 @@ fzf --fish | source
 fish_user_key_bindings
 
 abbr "?" "opencode run --model openai/gpt-5.4-mini-fast"
-abbr "oc" "opencode"
-abbr "sk" "sioyek"
-abbr "ell" "eza --long --tree --level 2 --icons --git --all"
-abbr "els" "eza --tree --level 2 --icons --git"
-abbr "gitllog" "git log --graph --oneline --decorate --all"
-abbr "gitlog" "git --no-pager log --graph --oneline --decorate --all"
-abbr "vim" "nvim"
-abbr "grep" "grep --color=auto"
-abbr "pf" "fzf --preview='bat --color=always {}' --bind shift-up:preview-page-up,shift-down:preview-page-down"
+abbr oc opencode
+abbr sk sioyek
+abbr ell "eza --long --tree --level 2 --icons --git --all"
+abbr els "eza --tree --level 2 --icons --git"
+abbr gitllog "git log --graph --oneline --decorate --all"
+abbr gitlog "git --no-pager log --graph --oneline --decorate --all"
+abbr vim nvim
+abbr grep "grep --color=auto"
+abbr s "source $HOME/.config/fish/config.fish"
