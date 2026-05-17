@@ -23,7 +23,6 @@ zoxide init --cmd cd fish | source
 fzf --fish | source
 fish_user_key_bindings
 
-abbr "?" "opencode run --model openai/gpt-5.4-mini-fast"
 abbr oc opencode
 abbr sk sioyek
 abbr ell "eza --long --tree --level 2 --icons --git --all"
@@ -33,3 +32,5 @@ abbr gitlog "git --no-pager log --graph --oneline --decorate --all"
 abbr vim nvim
 abbr grep "grep --color=auto"
 abbr s "source $HOME/.config/fish/config.fish"
+
+alias "?" "opencode run --model openai/gpt-5.4-mini-fast"
