@@ -12,7 +12,7 @@ end
 function fish_prompt
     set --local last_status $status
     set --local normal (set_color normal)
-    set --local cyan (set_color --bold cyan)   # fix: was set_color cyan
+    set --local cyan (set_color --bold cyan)
     set --local blue (set_color --bold blue)
     set --local red (set_color --bold red)
     set --local green (set_color --bold green)
@@ -38,5 +38,4 @@ function fish_prompt
         end
     end
     string join '' -- $arrow '  ' $cyan $current_dir $normal $git_info ' '
-    #                          ↑↑ fix: was single space
 end
