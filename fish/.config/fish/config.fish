@@ -20,7 +20,7 @@ fish_add_path /opt/homebrew/opt/postgresql@16/bin
 fish_add_path /opt/homebrew/opt/curl/bin
 
 /opt/homebrew/bin/brew shellenv | source
-zoxide init --cmd cd fish | source
+zoxide init fish | source
 fzf --fish | source
 fish_user_key_bindings
 
