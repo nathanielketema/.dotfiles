@@ -65,6 +65,8 @@ cask "zed"
 cask "zen"
 cask "zoom"
 
+go "github.com/tsoding/snitch"
+
 #cask "calibre"
 cask "audacity"
 cask "codex-app"

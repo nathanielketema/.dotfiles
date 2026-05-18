@@ -1,4 +1,4 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR __fish_initialized:4300
-SETUVAR fish_user_paths:/Users/nathaniel/\x2eoutfieldr/zig\x2dout/bin\x1e/Users/nathaniel/\x2elocal/bin\x1e/Users/nathaniel/\x2ecargo/bin\x1e/Users/nathaniel/\x2ezvm/bin\x1e/Users/nathaniel/\x2ezvm/self\x1e/Users/nathaniel/personal/scripts
+SETUVAR fish_user_paths:/Users/nathaniel/go/bin\x1e/Users/nathaniel/\x2eoutfieldr/zig\x2dout/bin\x1e/Users/nathaniel/\x2elocal/bin\x1e/Users/nathaniel/\x2ecargo/bin\x1e/Users/nathaniel/\x2ezvm/bin\x1e/Users/nathaniel/\x2ezvm/self\x1e/Users/nathaniel/personal/scripts

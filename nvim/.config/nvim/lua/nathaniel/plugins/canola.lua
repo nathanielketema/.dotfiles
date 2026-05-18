@@ -4,10 +4,7 @@ return {
 	opts = {},
 	config = function()
 		require("oil").setup({
-			columns = {
-				{ "size", highlight = "Special" },
-				"mtime",
-			},
+			columns = {},
 			skip_confirm_for_simple_edits = true,
 			view_options = {
 				show_hidden = true,
@@ -17,9 +14,6 @@ return {
 
 		set("n", "-", ":Oil<CR>")
 		set("n", ",o", function()
-			require("oil").set_columns({})
-		end)
-		set("n", ",b", function()
 			require("oil").set_columns({
 				{ "size", highlight = "Special" },
 				"mtime",
