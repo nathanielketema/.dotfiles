@@ -5,7 +5,6 @@ vim.g.mapleader = " "
 set("i", "jk", "<Esc>")
 set("i", "kj", "<Esc>")
 
-set("n", "-", ":Dired<CR>")
 set("n", "x", '"_x') -- Detete without yanking it
 
 set("n", "<C-u>", "<C-u>zz") -- Centers the cursor when moving up
@@ -38,6 +37,7 @@ set("t", "<C-w>j", "<C-\\><C-n><C-w>j")
 set("t", "<C-w>k", "<C-\\><C-n><C-w>k")
 set("n", ",v", ":vertical terminal<CR>i")
 set("n", ",s", ":horizontal terminal<CR>i")
+set("n", ",r", ":Bmake<CR>")
 
 -- Quickfix
 set("n", "<leader>co", ":copen<CR>")
