@@ -35,3 +35,4 @@ abbr grep "grep --color=auto"
 abbr s "source $HOME/.config/fish/config.fish"
 
 alias "?" "opencode run --model openai/gpt-5.4-mini-fast"
+alias config "config.zig"
