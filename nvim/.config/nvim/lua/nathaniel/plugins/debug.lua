@@ -33,7 +33,7 @@ return {
 			}
 
 			local zig_lldb_init = {
-				"command script import /Users/nathaniel/zig/tools/lldb_pretty_printers.py",
+				"command script import /Users/nathaniel/git-clone/zig/tools/lldb_pretty_printers.py",
 				"type category enable zig.lang",
 				"type category enable zig.std",
 				"type category enable zig.stage2",
