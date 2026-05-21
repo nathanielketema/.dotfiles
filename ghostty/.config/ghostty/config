@@ -1,6 +1,9 @@
-theme = "TokyoNight Night"
+#theme = "TokyoNight Night"
+theme = "Everforest Dark Soft"
 font-family = "Iosevka"
-font-size = 14
+font-size = 18
 font-feature = -liga
 shell-integration-features = "no-cursor, title"
 keybind = "global:cmd+g=toggle_quick_terminal"
+window-decoration = false
+macos-titlebar-style = hidden

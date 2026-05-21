@@ -12,22 +12,27 @@ return {
 
 		config = function()
 			vim.opt.background = "dark"
-			vim.cmd.colorscheme("tokyonight-night")
+			--vim.cmd.colorscheme("tokyonight-night")
 		end,
 	},
 	{
-		"rose-pine/neovim",
-		name = "rose-pine",
+		"zenbones-theme/zenbones.nvim",
+		dependencies = "rktjmp/lush.nvim",
 		lazy = false,
 		priority = 1000,
-		opts = {
-			variant = "main",
-			dim_inactive_windows = false,
-			extend_background_behind_borders = true,
-		},
 		config = function()
-			vim.opt.background = "dark"
-			--vim.cmd.colorscheme("rose-pine")
+			vim.g.zenbones_darken_comments = 45
+			--vim.cmd.colorscheme("neobones")
+		end,
+	},
+	{
+		"sainnhe/everforest",
+		lazy = false,
+		priority = 1000,
+		config = function()
+            vim.g.everforest_background = "soft"
+            vim.g.everforest_better_performance = 1
+			vim.cmd.colorscheme("everforest")
 		end,
 	},
 }
