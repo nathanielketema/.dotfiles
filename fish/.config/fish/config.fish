@@ -25,7 +25,9 @@ zoxide init fish | source
 fzf --fish | source
 fish_user_key_bindings
 
+abbr pomo pomo.zig
 abbr config config.zig
+abbr mtp mtp.zig
 abbr ell "eza --long --tree --level 2 --icons --git --all"
 abbr els "eza --tree --level 2 --icons --git"
 abbr gitllog "git log --graph --oneline --decorate --all"
