@@ -36,6 +36,7 @@ return {
 					"ty",
 					"unocss-language-server",
 					"yq",
+                    "denols",
                     "fish_lsp",
 				},
 			})

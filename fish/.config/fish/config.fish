@@ -28,14 +28,15 @@ fish_user_key_bindings
 abbr pomo pomo.zig
 abbr config config.zig
 abbr mtp mtp.zig
+abbr ctp ctp.zig
 abbr ell "eza --long --tree --level 2 --icons --git --all"
 abbr els "eza --tree --level 2 --icons --git"
 abbr gitllog "git log --graph --oneline --decorate --all"
 abbr gitlog "git --no-pager log --graph --oneline --decorate --all"
-abbr grep "grep --color=auto"
 abbr oc opencode
 abbr s "source $HOME/.config/fish/config.fish"
 abbr sk sioyek
 abbr vim nvim
 
 alias "?" "opencode run --model openai/gpt-5.4-mini-fast"
+alias grep "grep --color=auto"

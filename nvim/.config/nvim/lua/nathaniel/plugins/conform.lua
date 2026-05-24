@@ -19,7 +19,6 @@ return {
 		formatters_by_ft = {
 			fish = { "fish_indent" },
 			html = { "superhtml" },
-			javascript = { "biome" },
 			json = { "jq" },
 			lua = { "stylua" },
 			markdown = { "rumdl" },
@@ -27,7 +26,6 @@ return {
 			sh = { "shfmt" },
 			sql = { "sqruff" },
 			tex = { "tex-fmt" },
-			typescript = { "biome" },
 			yml = { "yq" },
 			zig = { "zigfmt" },
 		},
