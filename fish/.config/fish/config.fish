@@ -17,6 +17,7 @@ fish_add_path $HOME/.cargo/bin
 fish_add_path $HOME/.local/bin
 fish_add_path $HOME/go/bin/
 fish_add_path $HOME/.outfieldr/zig-out/bin # zldr
+fish_add_path $HOME/git-clone/zignal/zig-out/bin
 fish_add_path /opt/homebrew/opt/postgresql@16/bin
 fish_add_path /opt/homebrew/opt/curl/bin
 
