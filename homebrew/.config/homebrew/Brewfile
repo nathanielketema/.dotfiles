@@ -41,7 +41,6 @@ brew "uv"
 brew "w3m"
 brew "wget"
 brew "yazi"
-brew "zoxide"
 
 cask "aerospace"
 cask "appcleaner"
