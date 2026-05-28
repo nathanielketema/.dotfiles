@@ -18,11 +18,11 @@ fish_add_path $HOME/.local/bin
 fish_add_path $HOME/go/bin/
 fish_add_path $HOME/.outfieldr/zig-out/bin # zldr
 fish_add_path $HOME/git-clone/zignal/zig-out/bin
+fish_add_path $HOME/git-clone/zig/build/stage3/bin
 fish_add_path /opt/homebrew/opt/postgresql@16/bin
 fish_add_path /opt/homebrew/opt/curl/bin
 
 /opt/homebrew/bin/brew shellenv | source
-zoxide init fish | source
 fzf --fish | source
 fish_user_key_bindings
 
@@ -38,6 +38,7 @@ abbr oc opencode
 abbr s "source $HOME/.config/fish/config.fish"
 abbr sk sioyek
 abbr vim nvim
+abbr y yazi
 
 alias "?" "opencode run --model openai/gpt-5.4-mini-fast"
 alias grep "grep --color=auto"
