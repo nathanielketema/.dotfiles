@@ -37,7 +37,10 @@ set("t", "<C-w>j", "<C-\\><C-n><C-w>j")
 set("t", "<C-w>k", "<C-\\><C-n><C-w>k")
 set("n", ",v", ":vertical terminal<CR>i")
 set("n", ",s", ":horizontal terminal<CR>i")
-set("n", ",r", ":Bmake<CR>")
+set("n", ",r", function()
+	vim.cmd("Bmake")
+	vim.cmd("wincmd L")
+end)
 
 -- Quickfix
 set("n", "<leader>co", ":copen<CR>")
