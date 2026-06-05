@@ -40,5 +40,14 @@ abbr sk sioyek
 abbr vim nvim
 abbr y yazi
 
-alias "?" "opencode run --model openai/gpt-5.4-mini-fast"
+alias "?" "opencode run --model google/gemini-3.5-flash"
 alias grep "grep --color=auto"
+
+
+# BEGIN opam configuration
+# This is useful if you're using opam as it adds:
+#   - the correct directories to the PATH
+#   - auto-completion for the opam binary
+# This section can be safely removed at any time if needed.
+test -r '/Users/nathaniel/.opam/opam-init/init.fish' && source '/Users/nathaniel/.opam/opam-init/init.fish' > /dev/null 2> /dev/null; or true
+# END opam configuration

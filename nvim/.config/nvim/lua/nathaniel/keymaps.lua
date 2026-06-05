@@ -39,7 +39,7 @@ set("n", ",v", ":vertical terminal<CR>i")
 set("n", ",s", ":horizontal terminal<CR>i")
 set("n", ",r", function()
 	vim.cmd("Bmake")
-	vim.cmd("wincmd L")
+	--vim.cmd("wincmd L")
 end)
 
 -- Quickfix

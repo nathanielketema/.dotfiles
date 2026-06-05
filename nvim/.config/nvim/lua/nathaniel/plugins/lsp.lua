@@ -23,8 +23,6 @@ return {
 					"jq",
 					"lua_ls",
 					"marksman",
-					"ocamlformat",
-					"ocamllsp",
 					"pyrefly",
 					"ruff",
 					"rumdl",
@@ -60,6 +58,7 @@ return {
 			})
 
 			vim.lsp.enable("zls")
+			vim.lsp.enable("ocamllsp")
 
 			vim.lsp.config("lua_ls", {
 				settings = {
