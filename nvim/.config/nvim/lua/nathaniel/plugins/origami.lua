@@ -4,7 +4,6 @@ return {
 	opts = {
 		autoFold = {
 			enabled = false,
-			kinds = { "comment", "imports" },
 		},
 	},
 

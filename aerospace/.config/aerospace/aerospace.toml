@@ -125,15 +125,15 @@ ctrl-3 = 'workspace 3' # terminal
 ctrl-4 = 'workspace 4' # zen
 ctrl-5 = 'workspace 5' # zoom
 ctrl-6 = 'workspace 6' # messages
+ctrl-7 = 'workspace 7' # microsoft
+ctrl-8 = 'workspace 8'
+ctrl-9 = 'workspace 9'
 alt-a = 'workspace A' # free
 alt-b = 'workspace B' # free
 alt-c = 'workspace C' # vm
 alt-d = 'workspace D' # discord
 alt-w = 'workspace W' # journal
 alt-f = 'workspace F' # finder
-ctrl-7 = 'workspace 7' # microsoft
-ctrl-8 = 'workspace 8'
-ctrl-9 = 'workspace 9' # safari
 alt-m = 'workspace M' # music
 alt-n = 'workspace N' # notes
 alt-p = 'workspace P' # preview
@@ -292,3 +292,7 @@ run = "layout floating"
 [[on-window-detected]]
 if.app-id = 'com.apple.Notes'
 run = 'layout floating'
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'breakaml'
+run = 'layout tiling'

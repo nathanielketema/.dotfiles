@@ -4,7 +4,7 @@ function __robbyrussell_git_branch
 end
 
 function __robbyrussell_git_dirty
-    not command git diff --quiet --ignore-submodules HEAD 2>/dev/null
+    not command git diff --quiet --ignore-submodules 2>/dev/null
     and return 0
     command git ls-files --others --exclude-standard --directory --no-empty-directory 2>/dev/null | string length -q
 end

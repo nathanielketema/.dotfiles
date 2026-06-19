@@ -35,11 +35,15 @@ set("t", "<C-w>h", "<C-\\><C-n><C-w>h")
 set("t", "<C-w>l", "<C-\\><C-n><C-w>l")
 set("t", "<C-w>j", "<C-\\><C-n><C-w>j")
 set("t", "<C-w>k", "<C-\\><C-n><C-w>k")
-set("n", ",v", ":vertical terminal<CR>i")
-set("n", ",s", ":horizontal terminal<CR>i")
-set("n", ",r", function()
+set("n", ",t", ":vertical terminal<CR>i")
+set("n", ",v", function()
 	vim.cmd("Bmake")
-	--vim.cmd("wincmd L")
+	vim.cmd("wincmd L")
+    vim.api.nvim_win_set_width(0, 90)
+end)
+set("n", ",s", function()
+	vim.cmd("Bmake")
+    vim.api.nvim_win_set_height(0, 10)
 end)
 
 -- Quickfix
@@ -56,9 +60,7 @@ set("n", "<leader>ro", ":!pdflatex '%:.'<CR>:!open '%:r'.pdf<CR>")
 set("n", "<leader>rl", ":!pdflatex '%:.'<CR>")
 set("n", "<leader>rb", ":!biber '%:r'<CR>")
 set("n", "<leader>op", ":!open '%:r'.pdf<CR>")
-
--- Sioyek
-set("n", "<C-s>", ":!tmux_sioyek %<CR>")
+set("n", "<leader>os", ":!tmux_sioyek %<CR>")
 
 -- Git
 set("n", "<leader>ga", ":!gac<CR>", { desc = "Git add and commit" })

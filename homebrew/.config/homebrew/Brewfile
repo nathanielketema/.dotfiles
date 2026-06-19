@@ -1,5 +1,6 @@
 tap "anomalyco/tap" # opencode
 tap "nikitabobko/tap" # aerospace
+tap "buo/cask-upgrade"
 
 brew "btop"
 brew "cmake"
@@ -43,7 +44,6 @@ cask "font-eb-garamond"
 cask "font-Iosevka"
 cask "font-hack-nerd-font"
 cask "ghostty"
-cask "helium-browser"
 cask "microsoft-teams"
 cask "mullvad-vpn"
 cask "obsidian"

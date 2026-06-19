@@ -1,0 +1,12 @@
+{
+  "trustedtaps": [
+    "anomalyco/tap",
+    "nikitabobko/tap"
+  ],
+  "trustedcommands": [
+    "buo/cask-upgrade/cu"
+  ],
+  "trustedformulae": [
+    "anomalyco/tap/opencode"
+  ]
+}
