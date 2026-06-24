@@ -1,6 +1,6 @@
-tap "anomalyco/tap" # opencode
-tap "nikitabobko/tap" # aerospace
-tap "buo/cask-upgrade"
+tap "anomalyco/tap", trusted: true    # opencode
+tap "nikitabobko/tap", trusted: true  # aerospace
+tap "buo/cask-upgrade", trusted: true
 
 brew "btop"
 brew "cmake"
@@ -11,6 +11,7 @@ brew "fd"
 brew "fish"
 brew "fzf"
 brew "gh"
+brew "git-delta"
 brew "git"
 brew "go"
 brew "hyperfine" 

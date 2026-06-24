@@ -1,12 +1,7 @@
 {
   "trustedtaps": [
     "anomalyco/tap",
+    "buo/cask-upgrade",
     "nikitabobko/tap"
-  ],
-  "trustedcommands": [
-    "buo/cask-upgrade/cu"
-  ],
-  "trustedformulae": [
-    "anomalyco/tap/opencode"
   ]
 }
