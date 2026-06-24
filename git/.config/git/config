@@ -2,6 +2,7 @@
 	autocrlf = input
 	editor = nvim
 	excludesFile = $HOME/.config/git/exclude
+    pager = delta
 [user]
 	name = Nathaniel Ketema
 	email = nathanielketema@gmail.com
@@ -23,7 +24,11 @@
 [branch]
     sort= "committerdate"
 [merge]
-    tool = nvimdiff
-    conflictstyle = "diff3"
+    conflictstyle = zdiff3
 [advice]
     detachedHead = false
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigate = true
+    dark = true
