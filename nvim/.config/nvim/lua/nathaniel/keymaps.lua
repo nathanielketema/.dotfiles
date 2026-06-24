@@ -62,6 +62,7 @@ set("n", "<C-p>", ":cprevious<CR>")
 
 -- Tmux sessionizer
 set("n", "<C-f>", ":terminal tmux_sessionizer<CR>i", { silent = true })
+set("n", "<C-l>", ":terminal tmux_jump<CR>i", { silent = true })
 
 -- LaTeX
 set("n", "<leader>ro", ":!pdflatex '%:.'<CR>:!open '%:r'.pdf<CR>")
