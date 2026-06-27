@@ -8,7 +8,9 @@ return {
 				only_render_image_at_cursor_mode = "popup", -- or "inline"
 			},
 		},
-		window_overlap_clear_enabled = false, -- toggles images when windows are overlapped
+
+		editor_only_render_when_focused = true,
+		window_overlap_clear_enabled = true, -- toggles images when windows are overlapped
 		tmux_show_only_in_active_window = true,
 	},
 }

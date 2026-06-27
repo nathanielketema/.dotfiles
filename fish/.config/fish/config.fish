@@ -15,7 +15,7 @@ fish_add_path $HOME/.zvm/bin
 fish_add_path $HOME/.cargo/bin
 fish_add_path $HOME/.local/bin
 fish_add_path $HOME/go/bin/
-fish_add_path $HOME/personal/scripts/bin/
+fish_add_path $HOME/personal/scripts/zig-out/bin/
 fish_add_path $HOME/.outfieldr/zig-out/bin # zldr
 fish_add_path $HOME/git-clone/zignal/zig-out/bin
 fish_add_path $HOME/git-clone/zig/build/stage3/bin

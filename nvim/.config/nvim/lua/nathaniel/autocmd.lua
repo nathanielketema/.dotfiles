@@ -30,6 +30,6 @@ vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
 
 -- Remove [Process exit] after using tmux_sessionizer
 vim.api.nvim_create_autocmd("TermClose", {
-	pattern = "*tmux_sessionizer",
+	pattern = { "*tmux_sessionizer", "*tmux_jump" },
 	command = "bdelete!",
 })
