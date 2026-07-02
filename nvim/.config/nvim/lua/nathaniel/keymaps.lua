@@ -54,6 +54,7 @@ end)
 -- Chat
 set("n", "<leader>cho", ":vertical terminal opencode<CR>i", { silent = true })
 set("n", "<leader>chc", ":vertical terminal codex<CR>i", { silent = true })
+set("n", "<leader>chp", ":vertical terminal pi<CR>i", { silent = true })
 
 -- Quickfix
 set("n", "<leader>co", ":copen<CR>")

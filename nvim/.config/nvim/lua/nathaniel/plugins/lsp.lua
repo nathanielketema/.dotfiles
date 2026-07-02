@@ -57,7 +57,10 @@ return {
 				severity_sort = true,
 			})
 
-			vim.lsp.enable("zls")
+			vim.lsp.config("zls", {
+				filetypes = { "zig", "zon" },
+			})
+            vim.lsp.enable("zls")
 			vim.lsp.enable("ocamllsp")
 
 			vim.lsp.config("lua_ls", {

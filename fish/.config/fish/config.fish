@@ -13,10 +13,11 @@ set --global fish_greeting
 fish_add_path $HOME/.zvm/self
 fish_add_path $HOME/.zvm/bin
 fish_add_path $HOME/.cargo/bin
-fish_add_path $HOME/.local/bin
 fish_add_path $HOME/go/bin/
+fish_add_path $HOME/.deno/bin/
 fish_add_path $HOME/personal/scripts/zig-out/bin/
 fish_add_path $HOME/.outfieldr/zig-out/bin # zldr
+fish_add_path $HOME/git-clone/zigdown/zig-out/bin
 fish_add_path $HOME/git-clone/zignal/zig-out/bin
 fish_add_path $HOME/git-clone/zig/build/stage3/bin
 fish_add_path /opt/homebrew/opt/postgresql@16/bin
@@ -36,7 +37,7 @@ abbr sk sioyek
 abbr vim nvim
 abbr y yazi
 
-alias "?" "opencode run --model google/gemini-3.5-flash"
+alias "?" "opencode run --model opencode/big-pickle"
 alias grep "grep --color=auto"
 
 
