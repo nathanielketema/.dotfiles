@@ -14,8 +14,8 @@ return {
 			"json",
 			"latex",
 			"lua",
-			"markdown",
 			"markdown_inline",
+			"markdown",
 			"python",
 			"tsx",
 			"typescript",
@@ -23,6 +23,7 @@ return {
 			"vimdoc",
 			"yaml",
 			"zig",
+            "svelte",
 		}
 
 		require("nvim-treesitter")
@@ -49,6 +50,7 @@ return {
 				"typescriptreact",
 				"vim",
 				"yaml",
+                "svelte",
 				"zig",
 			},
 			callback = function(args)

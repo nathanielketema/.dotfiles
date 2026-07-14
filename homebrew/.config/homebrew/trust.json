@@ -3,5 +3,8 @@
     "anomalyco/tap",
     "buo/cask-upgrade",
     "nikitabobko/tap"
+  ],
+  "trustedformulae": [
+    "anomalyco/tap/opencode"
   ]
 }

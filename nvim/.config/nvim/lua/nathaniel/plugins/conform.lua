@@ -28,6 +28,7 @@ return {
 			sql = { "sqruff" },
 			tex = { "tex-fmt" },
 			yml = { "yq" },
+			svelte = { "biome" },
 			zig = { "zigfmt" },
 		},
 		formatters = {
