@@ -29,6 +29,8 @@ return {
 			tex = { "tex-fmt" },
 			yml = { "yq" },
 			svelte = { "biome" },
+			javascript = { "biome" },
+			typescript = { "biome" },
 			zig = { "zigfmt" },
 		},
 		formatters = {

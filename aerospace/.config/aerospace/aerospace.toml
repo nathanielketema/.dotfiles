@@ -301,3 +301,7 @@ run = 'layout floating'
 [[on-window-detected]]
 if.app-name-regex-substring = 'breakaml'
 run = 'layout tiling'
+
+[[on-window-detected]]
+if.app-id = 'com.christopherlawley.TheUntitledJournal'
+run = 'layout floating'

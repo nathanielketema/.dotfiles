@@ -1,6 +1,6 @@
 local set = vim.opt_local
 
-local build_zig = vim.fn.findfile("build.zig", ".;")
+local build_zig = vim.fn.findfile("build.zig", ".;", 1)
 
 if build_zig == "" then
     set.makeprg = "zig run %"
