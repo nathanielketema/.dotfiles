@@ -20,6 +20,7 @@ return {
 					"codelldb",
 					"denols",
 					"fish_lsp",
+					"harper_ls",
 					"jq",
 					"lua_ls",
 					"marksman",
@@ -60,7 +61,7 @@ return {
 			vim.lsp.config("zls", {
 				filetypes = { "zig", "zon" },
 			})
-            vim.lsp.enable("zls")
+			vim.lsp.enable("zls")
 			vim.lsp.enable("ocamllsp")
 
 			vim.lsp.config("lua_ls", {
@@ -70,6 +71,29 @@ return {
 						diagnostics = { globals = { "vim", "require" } },
 						workspace = {
 							library = vim.api.nvim_get_runtime_file("", true),
+						},
+					},
+				},
+			})
+			vim.lsp.config("harper", {
+				cmd = { "harper-ls", "--stdio" },
+				filetypes = {
+					"c",
+					"gitcommit",
+					"html",
+					"javascript",
+					"lua",
+					"markdown",
+					"python",
+					"tex",
+					"zig",
+					"typescript",
+				},
+				root_markers = { ".harper-dictionary.txt", ".git" },
+				settings = {
+					["harper-ls"] = {
+						linters = {
+							SentenceCapitalization = false,
 						},
 					},
 				},
