@@ -1,6 +1,5 @@
 tap "anomalyco/tap", trusted: true    # opencode
 tap "nikitabobko/tap", trusted: true  # aerospace
-tap "buo/cask-upgrade", trusted: true
 
 brew "btop"
 brew "cmake"
@@ -18,7 +17,7 @@ brew "hyperfine"
 brew "imagemagick" # for image.nvim
 brew "luarocks"
 brew "mpv"
-brew "neovim"
+brew "neovim", args: ["HEAD"]
 brew "ninja"
 brew "node"
 brew "opam"

@@ -1,7 +1,6 @@
 {
   "trustedtaps": [
     "anomalyco/tap",
-    "buo/cask-upgrade",
     "nikitabobko/tap"
   ]
 }

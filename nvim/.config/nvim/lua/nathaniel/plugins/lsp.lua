@@ -75,7 +75,7 @@ return {
 					},
 				},
 			})
-			vim.lsp.config("harper", {
+			vim.lsp.config("harper_ls", {
 				cmd = { "harper-ls", "--stdio" },
 				filetypes = {
 					"c",
@@ -94,6 +94,10 @@ return {
 					["harper-ls"] = {
 						linters = {
 							SentenceCapitalization = false,
+							UseTitleCase = false,
+							ToDoHyphen = false,
+							SpellCheck = false,
+							OrthographicConsistency = false,
 						},
 					},
 				},
