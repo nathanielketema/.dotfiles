@@ -76,8 +76,6 @@ addToPathFront $HOME/.zvm/bin
 addToPathFront $HOME/personal/scripts
 addToPathFront $ZVM_INSTALL
 
-alias "?"="opencode run --model openai/gpt-5.4-mini-fast"
-alias oc="opencode"
 alias sk="sioyek"
 alias s="source $HOME/.zshrc"
 alias ell="eza --long --tree --level 2 --icons --git --all"

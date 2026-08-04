@@ -1,4 +1,3 @@
-tap "anomalyco/tap", trusted: true    # opencode
 tap "nikitabobko/tap", trusted: true  # aerospace
 
 brew "btop"
@@ -21,7 +20,6 @@ brew "neovim", args: ["HEAD"]
 brew "ninja"
 brew "node"
 brew "opam"
-brew "opencode"
 brew "pandoc-crossref"
 brew "pandoc"
 brew "python@3.13"

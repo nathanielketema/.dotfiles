@@ -59,9 +59,6 @@ set("n", "<leader>e", function()
 	vim.api.nvim_win_resize(0, 40, -1)
 end)
 
--- Chat
-set("n", "<leader>cho", ":vertical terminal opencode<CR>i", { silent = true })
-
 -- Quickfix
 set("n", "<leader>co", ":copen<CR>")
 set("n", "<leader>cc", ":cclose<CR>")

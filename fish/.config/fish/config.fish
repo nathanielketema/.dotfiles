@@ -31,13 +31,11 @@ abbr ell "eza --long --tree --level 2 --icons --git --all"
 abbr els "eza --tree --level 2 --icons --git"
 abbr gitllog "git log --graph --oneline --decorate --all"
 abbr gitlog "git --no-pager log --graph --oneline --decorate --all"
-abbr oc opencode
 abbr s "source $HOME/.config/fish/config.fish"
 abbr sk sioyek
 abbr vim nvim
 abbr y yazi
 
-alias "?" "opencode run --model opencode/big-pickle"
 alias grep "grep --color=auto"
 
 
