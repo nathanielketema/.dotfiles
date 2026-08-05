@@ -51,7 +51,6 @@ cask "raycast"
 cask "sioyek"
 cask "telegram"
 cask "webull"
-cask "zed"
 cask "zen"
 cask "zoom"
 

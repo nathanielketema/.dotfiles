@@ -1,6 +1,5 @@
 {
   "trustedtaps": [
-    "anomalyco/tap",
     "nikitabobko/tap"
   ]
 }
