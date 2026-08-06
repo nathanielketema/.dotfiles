@@ -215,6 +215,10 @@ if.app-id = 'com.apple.MobileSMS'
 run = "move-node-to-workspace 6"
 
 [[on-window-detected]]
+if.app-id = 'org.whispersystems.signal-desktop'
+run = "move-node-to-workspace 6"
+
+[[on-window-detected]]
 if.app-id = 'com.apple.AppStore'
 run = ['layout floating', 'move-node-to-workspace 6']
 
@@ -301,7 +305,3 @@ run = 'layout floating'
 [[on-window-detected]]
 if.app-name-regex-substring = 'breakaml'
 run = 'layout tiling'
-
-[[on-window-detected]]
-if.app-id = 'com.christopherlawley.TheUntitledJournal'
-run = 'layout floating'
