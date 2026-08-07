@@ -41,22 +41,21 @@ set("n", ",h", function()
 	vim.cmd("startinsert")
 	vim.api.nvim_win_resize(0, -1, 10)
 end)
-set("n", ",v", "<C-w>v")
-set("n", ",s", "<C-w>s")
-set("n", ",r", function()
+
+-- Bmake
+set("n", ",v", function()
 	vim.cmd("Bmake")
 	vim.cmd("wincmd L")
 	vim.api.nvim_win_resize(0, 90, -1)
 end)
-set("n", ",e", function()
+set("n", ",s", function()
 	vim.cmd("Bmake")
 	vim.api.nvim_win_resize(0, -1, 25)
 end)
 
-set("n", "<leader>e", function()
-	vim.cmd("exmode")
-	vim.cmd("wincmd L")
-	vim.api.nvim_win_resize(0, 40, -1)
+-- Exmode
+set("n", ",c", function ()
+    vim.cmd("exmode")
 end)
 
 -- Quickfix
