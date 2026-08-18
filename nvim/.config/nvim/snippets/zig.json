@@ -20,7 +20,7 @@
     },
     "ztodo": {
         "prefix": "ztodo",
-        "body": "@panic(\"TODO\");"
+        "body": "@panic(\"TODO: $0\");"
     },
     "zprint": {
         "prefix": "zprint",

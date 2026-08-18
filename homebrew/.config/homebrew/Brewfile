@@ -33,6 +33,7 @@ brew "tree-sitter-cli"
 brew "uv"
 brew "w3m"
 brew "wget"
+brew "xcodes"
 brew "yazi"
 
 cask "aerospace"
