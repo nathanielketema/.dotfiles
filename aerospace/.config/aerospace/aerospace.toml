@@ -209,6 +209,9 @@ run = "move-node-to-workspace 3"
 if.app-id = 'app.zen-browser.zen'
 run = "move-node-to-workspace 4"
 
+[[on-window-detected]]
+if.app-id = 'com.apple.Safari'
+run = "move-node-to-workspace 4"
 
 [[on-window-detected]]
 if.app-id = 'com.apple.MobileSMS'
