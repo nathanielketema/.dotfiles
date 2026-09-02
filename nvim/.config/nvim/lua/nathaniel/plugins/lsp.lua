@@ -68,7 +68,7 @@ return {
 				settings = {
 					Lua = {
 						runtime = { version = "LuaJIT" },
-						diagnostics = { globals = { "vim", "require" } },
+						diagnostics = { globals = { "vim", "require", "pandoc", "PANDOC_STATE" } },
 						workspace = {
 							library = vim.api.nvim_get_runtime_file("", true),
 						},
@@ -78,16 +78,10 @@ return {
 			vim.lsp.config("harper_ls", {
 				cmd = { "harper-ls", "--stdio" },
 				filetypes = {
-					"c",
 					"gitcommit",
 					"html",
-					"javascript",
-					"lua",
 					"markdown",
-					"python",
 					"tex",
-					"zig",
-					"typescript",
 				},
 				root_markers = { ".harper-dictionary.txt", ".git" },
 				settings = {
