@@ -1,9 +1,9 @@
 tap "nikitabobko/tap", trusted: true  # aerospace
+tap "here-leslie-lau/tap", trusted: true # zl
 
 brew "btop"
 brew "cmake"
 brew "deno"
-brew "eza"
 brew "fastfetch"
 brew "fd"
 brew "fish"
@@ -35,12 +35,13 @@ brew "w3m"
 brew "wget"
 brew "xcodes"
 brew "yazi"
+brew "zlist"
 
 cask "aerospace"
 cask "appcleaner"
 cask "docker-desktop"
-cask "font-Iosevka"
 cask "font-eb-garamond"
+cask "font-Iosevka"
 cask "ghostty"
 cask "helium-browser"
 cask "microsoft-teams"

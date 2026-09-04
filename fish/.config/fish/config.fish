@@ -27,8 +27,6 @@ fish_add_path /opt/homebrew/opt/curl/bin
 fzf --fish | source
 fish_user_key_bindings
 
-abbr ell "eza --long --tree --level 2 --icons --git --all"
-abbr els "eza --tree --level 2 --icons --git"
 abbr gitllog "git log --graph --oneline --decorate --all"
 abbr gitlog "git --no-pager log --graph --oneline --decorate --all"
 abbr s "source $HOME/.config/fish/config.fish"

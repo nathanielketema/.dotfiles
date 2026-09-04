@@ -1,5 +1,6 @@
 {
   "trustedtaps": [
+    "here-leslie-lau/tap",
     "nikitabobko/tap"
   ]
 }
