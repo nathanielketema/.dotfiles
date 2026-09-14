@@ -1,4 +1,4 @@
-tap "nikitabobko/tap", trusted: true  # aerospace
+tap "nikitabobko/tap", trusted: true     # aerospace
 tap "here-leslie-lau/tap", trusted: true # zl
 
 brew "btop"

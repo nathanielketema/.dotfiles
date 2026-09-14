@@ -53,6 +53,9 @@ set("n", ",s", function()
 	vim.api.nvim_win_resize(0, -1, 25)
 end)
 
+-- Brun
+set("n", "<leader>B", ":Brun ")
+
 -- Exmode
 set("n", ",c", function ()
     vim.cmd("exmode")
