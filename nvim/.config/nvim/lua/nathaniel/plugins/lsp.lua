@@ -18,6 +18,7 @@ return {
 					"clang-format",
 					"clangd",
 					"codelldb",
+                    "cssls",
 					"denols",
 					"fish_lsp",
 					"harper_ls",
@@ -37,7 +38,6 @@ return {
 					"textlint",
 					"ts_ls",
 					"ty",
-					"unocss-language-server",
 					"yq",
 				},
 			})
