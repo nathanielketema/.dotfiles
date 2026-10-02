@@ -76,7 +76,7 @@ set("n", "<leader>ro", ":!pdflatex '%:.'<CR>:!open '%:r'.pdf<CR>")
 set("n", "<leader>rl", ":!pdflatex '%:.'<CR>")
 set("n", "<leader>rb", ":!biber '%:r'<CR>")
 set("n", "<leader>op", ":!open '%:r'.pdf<CR>")
-set("n", "<leader>os", ":!tmux_sioyek %<CR>")
+set("n", "<leader>os", ":!tmux_sioyek '%:r'.pdf<CR>")
 
 -- Git
 set("n", "<leader>ga", ":!gac<CR>", { desc = "Git add and commit" })

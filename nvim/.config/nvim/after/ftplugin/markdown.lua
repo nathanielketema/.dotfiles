@@ -1,3 +1,3 @@
 local set = vim.opt_local
 
-set.makeprg = "ctp.zig %"
+set.makeprg = "ctp %"

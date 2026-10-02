@@ -199,10 +199,6 @@ gaps.outer.right =      0
     run = "move-node-to-workspace 1"
 
 [[on-window-detected]]
-    if.app-id = 'com.apple.reminders'
-    run = "move-node-to-workspace 1"
-
-[[on-window-detected]]
     if.app-id = 'com.apple.mail'
     run = "move-node-to-workspace 2"
 
@@ -248,7 +244,7 @@ gaps.outer.right =      0
 
 [[on-window-detected]]
     if.app-id = 'com.apple.reminders'
-    run = "move-node-to-workspace M"
+    run = "move-node-to-workspace R"
 
 [[on-window-detected]]
     if.app-id = 'com.apple.Preview'
