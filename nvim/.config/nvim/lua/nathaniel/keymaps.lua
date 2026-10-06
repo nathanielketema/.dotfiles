@@ -54,7 +54,7 @@ set("n", ",s", function()
 end)
 
 -- Brun
-set("n", "<leader>B", ":Brun ")
+set("n", ",b", ":Brun ")
 
 -- Exmode
 set("n", ",c", function ()
