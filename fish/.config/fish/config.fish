@@ -17,10 +17,10 @@ fish_add_path $HOME/go/bin/
 fish_add_path $HOME/.deno/bin/
 fish_add_path $HOME/personal/scripts/zig-out/bin/
 fish_add_path $HOME/.outfieldr/zig-out/bin # zldr
-fish_add_path $HOME/git-clone/zigdown/zig-out/bin
-fish_add_path $HOME/git-clone/zignal/zig-out/bin
-fish_add_path $HOME/git-clone/zig/build/stage3/bin
-fish_add_path $HOME/git-clone/slap/zig-out/bin
+fish_add_path $HOME/cloned/zigdown/zig-out/bin
+fish_add_path $HOME/cloned/zignal/zig-out/bin
+fish_add_path $HOME/cloned/zig/build/stage3/bin
+fish_add_path $HOME/cloned/slap/zig-out/bin
 fish_add_path /opt/homebrew/opt/postgresql@16/bin
 fish_add_path /opt/homebrew/opt/curl/bin
 
