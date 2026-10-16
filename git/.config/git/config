@@ -1,7 +1,7 @@
 [core]
 	autocrlf = input
 	editor = nvim
-	excludesFile = $HOME/.config/git/exclude
+	excludesFile = ~/.config/git/exclude
     pager = delta
 [user]
 	name = Nathaniel Ketema

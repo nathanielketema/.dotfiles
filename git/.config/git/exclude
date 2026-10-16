@@ -1,5 +1,7 @@
 .DS_Store
 node_modules/
-make.ts
+.zig-cache/
+.zig-out/
+.env.local
 make.zig
 Shell.zig
