@@ -1,6 +1,7 @@
 tap "nikitabobko/tap", trusted: true     # aerospace
 tap "here-leslie-lau/tap", trusted: true # zl
 
+brew "bat"
 brew "btop"
 brew "cmake"
 brew "deno"
@@ -59,4 +60,5 @@ cask "zoom"
 go "github.com/tsoding/snitch"
 
 #cask "calibre"
+cask "codex"
 brew "grex"
