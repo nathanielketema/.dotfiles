@@ -10,13 +10,13 @@ set --global --export FZF_CTRL_T_COMMAND "fd --type f"
 # Remove greeting
 set --global fish_greeting
 
-fish_add_path $HOME/.zvm/self
-fish_add_path $HOME/.zvm/bin
 fish_add_path $HOME/.cargo/bin
 fish_add_path $HOME/go/bin/
 fish_add_path $HOME/.deno/bin/
 fish_add_path $HOME/personal/scripts/zig-out/bin/
 fish_add_path $HOME/.outfieldr/zig-out/bin # zldr
+fish_add_path $HOME/cloned/zig-installation-manager/zig-out/bin/zim-data/bin/
+fish_add_path $HOME/cloned/zig-installation-manager/zig-out/bin
 fish_add_path $HOME/cloned/zigdown/zig-out/bin
 fish_add_path $HOME/cloned/zignal/zig-out/bin
 fish_add_path $HOME/cloned/hum/zig-out/bin
