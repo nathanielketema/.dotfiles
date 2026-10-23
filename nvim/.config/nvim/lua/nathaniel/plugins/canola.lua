@@ -1,5 +1,5 @@
 return {
-	"barrettruth/canola.nvim",
+	"https://forge.barrettruth.com/barrettruth/canola.nvim",
 	lazy = false,
 	opts = {},
 	config = function()
