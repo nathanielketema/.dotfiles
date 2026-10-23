@@ -1,6 +1,6 @@
 return {
     'saghen/blink.cmp',
-    dependencies = 'rafamadriz/friendly-snippets',
+    dependencies = { 'L3MON4D3/LuaSnip' },
     version = '1.*',
 
     opts = {
@@ -11,19 +11,12 @@ return {
             nerd_font_variant = 'mono'
         },
 
-		 sources = {
-		     default = { 'lsp', 'path', 'snippets', 'buffer' },
-			 providers = {
-				 snippets = {
-					 opts = {
-						 search_paths = { vim.fn.stdpath('config') .. '/snippets' },
-					 },
-				 },
-			 },
-		 },
+        sources = {
+            default = { 'lsp', 'path', 'snippets', 'buffer' },
+        },
 
         snippets = {
-            preset = 'default',
+            preset = 'luasnip',
         },
 
         completion = {

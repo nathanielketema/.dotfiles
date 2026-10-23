@@ -1,0 +1,49 @@
+# Indent each body line with one tab; use $1, ${1:default}, and $0 for placeholders.
+# Backticks evaluate Vim expressions, such as `strftime("%Y-%m-%d")`.
+snippet note note
+	---
+	date: [`strftime("%H:%M, %Y-%m-%d")`]
+	---
+	
+	$0
+	
+	
+	[#tag]()
+	
+	---
+	
+	## Connections
+
+snippet daily daily
+	---
+	date: [`strftime("%H:%M, %Y-%m-%d")`]
+	---
+	
+	
+	# Today's Schedule
+	
+	- [ ] $0
+	
+	# Things to remember 
+	
+	- [ ] 
+
+snippet pandoc pandoc
+	---
+	title: "$1"
+	author: "$2"
+	date: \today
+	geometry: margin=1in
+	documentclass: extarticle
+	fontsize: 12pt
+	linkcolor: blue
+	numbersections: false
+	mainfont: "Times New Roman"
+	monofont: "Courier New"
+	header-includes:
+	    - \usepackage{titlesec}
+	    - \titleformat{\section}{\LARGE\bfseries\centering}{\thesection}{1em}{}
+	    - \titleformat{\subsection}{\Large\bfseries}{\thesection}{1em}{}
+	---
+	
+	$0

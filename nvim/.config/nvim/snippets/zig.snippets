@@ -1,0 +1,49 @@
+# Indent each body line with one tab; use $1, ${1:default}, and $0 for placeholders.
+# Backticks evaluate Vim expressions, such as `strftime("%Y-%m-%d")`.
+snippet zinit zinit
+	const std = @import("std");
+	const assert = std.debug.assert;
+	const testing = std.testing;
+	
+	const Io = std.Io;
+	const Allocator = std.mem.Allocator;
+	
+	pub fn main(init: std.process.Init) !void {
+	    $0
+	}
+
+snippet zlog zlog
+	@compileLog(@TypeOf($0));
+
+snippet ztodo ztodo
+	@panic("TODO: $0");
+
+snippet zprint zprint
+	std.debug.print("$1\n", .{$0});
+
+snippet zeetcode zeetcode
+	const std = @import("std");
+	const assert = std.debug.assert;
+	const testing = std.testing;
+	const Io = std.Io;
+	const Allocator = std.mem.Allocator;
+	
+	const Solution = struct {
+	   fn $0foo(arena: Allocator) !void {
+	   }
+	};
+	
+	test "solution" {
+	   const T = struct {
+	       fn check(want: bool) !void {
+	           var arena_instance: std.heap.ArenaAllocator = .init(testing.allocator);
+	           defer arena_instance.deinit();
+	           const arena = arena_instance.allocator();
+	           const got = try Solution.foo(arena);
+	           // print
+	           try testing.expectEqual(want, got);
+	       }
+	   };
+	
+	   try T.check(true);
+	}
