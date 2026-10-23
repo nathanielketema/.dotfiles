@@ -20,6 +20,8 @@ return {
 					"codelldb",
                     "cssls",
 					"denols",
+                    "elmls",
+                    "elm-format",
 					"fish_lsp",
 					"harper_ls",
 					"jq",

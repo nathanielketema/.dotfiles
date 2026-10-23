@@ -22,6 +22,7 @@ return {
 			json = { "jq" },
 			lua = { "stylua" },
 			markdown = { "rumdl" },
+			elm = { "elm_format" },
 			ocaml = { "ocamlformat" },
 			python = { "ruff_format", "ruff_organize_imports" },
 			sh = { "shfmt" },
