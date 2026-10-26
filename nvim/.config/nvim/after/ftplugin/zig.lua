@@ -5,5 +5,5 @@ local build_zig = vim.fn.findfile("build.zig", ".;", 1)
 if build_zig == "" then
 	set.makeprg = "zig run %"
 else
-	set.makeprg = "zig build"
+	set.makeprg = "zig build run"
 end
