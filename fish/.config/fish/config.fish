@@ -15,8 +15,8 @@ fish_add_path $HOME/go/bin/
 fish_add_path $HOME/.deno/bin/
 fish_add_path $HOME/personal/scripts/zig-out/bin/
 fish_add_path $HOME/.outfieldr/zig-out/bin # zldr
-fish_add_path $HOME/cloned/zig-installation-manager/zig-out/bin/zim-data/bin/
-fish_add_path $HOME/cloned/zig-installation-manager/zig-out/bin
+fish_add_path $HOME/cloned/zim/zig-out/bin/zim-data/bin/
+fish_add_path $HOME/cloned/zim/zig-out/bin
 fish_add_path $HOME/cloned/zigdown/zig-out/bin
 fish_add_path $HOME/cloned/zignal/zig-out/bin
 fish_add_path $HOME/cloned/hum/zig-out/bin

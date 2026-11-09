@@ -1,6 +1,6 @@
 # Indent each body line with one tab; use $1, ${1:default}, and $0 for placeholders.
 # Backticks evaluate Vim expressions, such as `strftime("%Y-%m-%d")`.
-snippet zinit zinit
+snippet start start
 	const std = @import("std");
 	const assert = std.debug.assert;
 	const testing = std.testing;
@@ -12,38 +12,33 @@ snippet zinit zinit
 	    $0
 	}
 
-snippet zlog zlog
+snippet clog compileLogType
 	@compileLog(@TypeOf($0));
 
-snippet ztodo ztodo
+snippet todo todo
 	@panic("TODO: $0");
 
-snippet zprint zprint
+snippet print debug print
 	std.debug.print("$1\n", .{$0});
 
-snippet zeetcode zeetcode
+snippet neetcode neetcode
 	const std = @import("std");
 	const assert = std.debug.assert;
 	const testing = std.testing;
-	const Io = std.Io;
 	const Allocator = std.mem.Allocator;
 	
 	const Solution = struct {
-	   fn $0foo(arena: Allocator) !void {
+	   fn $1($2) $3 {
 	   }
 	};
 	
-	test "solution" {
+	test {
 	   const T = struct {
-	       fn check(want: bool) !void {
-	           var arena_instance: std.heap.ArenaAllocator = .init(testing.allocator);
-	           defer arena_instance.deinit();
-	           const arena = arena_instance.allocator();
-	           const got = try Solution.foo(arena);
-	           // print
+	       fn check($2, want: $3) !void {
+	           const got = Solution.$1();
 	           try testing.expectEqual(want, got);
 	       }
 	   };
 	
-	   try T.check(true);
+	   try T.check($0);
 	}
