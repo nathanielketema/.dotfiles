@@ -1,3 +1,4 @@
+---@diagnostic disable: assign-type-mismatch
 local set = vim.opt
 
 set.guicursor = ""
